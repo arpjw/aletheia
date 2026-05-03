@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aletheia Laboratories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #fff;
+    color: #1a1a1a;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: #5b6bc0;
+    text-decoration: underline;
+    text-decoration-color: rgba(91,107,192,0.35);
+    transition: text-decoration-color 0.15s;
+  }
+
+  a:hover { text-decoration-color: #5b6bc0; }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; right: 0;
+    z-index: 100;
+    padding: 22px 40px;
+    display: flex;
+    gap: 32px;
+  }
+
+  nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  nav a:hover { text-decoration: underline; text-decoration-color: #1a1a1a; }
+
+  /* HERO */
+  .hero {
+    padding-top: 80px;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .hero-wordmark {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(52px, 8vw, 108px);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: 0.04em;
+    color: #b8bec8;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 20px;
+  }
+
+  /* ANNOUNCEMENT */
+  .announcement {
+    margin: 40px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+  }
+
+  .badge {
+    background: #e8eaed;
+    color: #1a1a1a;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .announcement-text {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .announcement-text:hover { text-decoration: underline; text-decoration-color: #1a1a1a; }
+
+  /* CONTENT */
+  .content {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 64px 24px 100px;
+  }
+
+  .intro {
+    margin-bottom: 48px;
+  }
+
+  .intro p {
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: #1a1a1a;
+  }
+
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* SECTIONS */
+  .section {
+    margin-top: 56px;
+  }
+
+  .section h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .section p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #1a1a1a;
+    line-height: 1.72;
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  .section p em {
+    font-style: italic;
+  }
+
+  /* CONTACT SECTION */
+  .contact-section {
+    margin-top: 56px;
+  }
+
+  .contact-section h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .contact-section p {
+    font-size: 17px;
+    color: #1a1a1a;
+    line-height: 1.72;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: #f0f0f0;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+    transition: background 0.15s;
+  }
+
+  .btn:hover { background: #e4e4e4; text-decoration: none; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid #e8e8e8;
+    padding: 22px 40px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #888;
+  }
+
+  footer a {
+    color: #888;
+    text-decoration: none;
+  }
+
+  footer a:hover { color: #1a1a1a; text-decoration: underline; }
+
+  footer span { margin: 0 8px; }
+
+  @media (max-width: 640px) {
+    nav { padding: 16px 20px; gap: 20px; }
+    .hero-wordmark { font-size: clamp(48px, 14vw, 72px); }
+    .content { padding: 48px 20px 80px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#research">Research</a>
+  <a href="#papers">Papers</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <span class="hero-wordmark">Aletheia<br>Laboratories</span>
+</div>
+
+<div class="content">
+
+  <div class="intro">
+    <p>
+      Aletheia Laboratories is an independent artificial intelligence research initiative. We study the internal structure of learned systems to understand what they represent, how they compute, and why they fail.
+    </p>
+    <p>
+      The central problem in AI is not capability. It is legibility. The scientific community's understanding of what neural networks actually compute lags far behind rapidly advancing capabilities. Knowledge of how these systems develop internal representations is concentrated within a handful of frontier labs, limiting both public discourse on AI and the ability of practitioners to trust and audit the systems they deploy.
+    </p>
+    <p>
+      To close this gap, we conduct mechanistic interpretability research with a specific focus on sequential and financial domains. Our work sits at the intersection of formal methods, financial time series, and the emerging science of neural circuits.
+    </p>
+  </div>
+
+  <div class="section" id="research">
+
+    <h2>Research is better when open</h2>
+    <p>
+      <em>Scientific progress requires transparency.</em> We believe that advancing the field's understanding of AI systems requires sharing findings with the wider research community. We plan to publish papers, technical notes, and code. Sharing our work improves both the public discourse on AI and our own research culture.
+    </p>
+
+    <h2>What circuits implement trend detection?</h2>
+    <p>
+      <em>Circuits in financial neural networks.</em> What does a transformer actually compute when it learns to detect trend continuation in futures return series? We apply activation patching, probing classifiers, and residual stream decomposition to identify the computational structures underlying learned market behavior and test whether they correspond to known statistical phenomena.
+    </p>
+    <p>
+      <em>Learned representations across regimes.</em> Neural networks trained on financial time series develop internal representations with no direct human analogue. We study the geometry of these representations across volatility regimes, asset classes, and model scales to understand what the residual stream encodes and when it breaks.
+    </p>
+
+    <h2>Foundations of verifiable AI behavior</h2>
+    <p>
+      <em>Formal verification of agent decision traces.</em> How do you prove that an AI agent did precisely what its mandate specified? Drawing from verifiable computation and formal methods, we develop cryptographically sound audit infrastructure for autonomous agents operating under economic constraints. The question of whether an agent's behavior can be independently verified is one of the most important open problems in AI deployment.
+    </p>
+    <p>
+      <em>Synthetic microstructure for agent training.</em> Real market microstructure data is proprietary, expensive, and non-stationary. High-fidelity synthetic generation that preserves the statistical properties critical for training financial AI agents is an open research problem. We are building toward it.
+    </p>
+
+  </div>
+
+  <div class="section" id="papers">
+
+    <h2>Papers and working notes</h2>
+    <p>
+      <em>What Do Trend-Following Transformers Actually Compute?</em> A mechanistic analysis of transformer circuits trained on futures return series under a momentum objective. We identify the attention heads and MLP sublayers implementing the trend signal, test whether the learned circuit corresponds to a known statistical operation such as exponentially weighted averaging, and examine how circuit behavior shifts across volatility regime transitions. Working paper, forthcoming.
+    </p>
+    <p>
+      <em>Superposition and Regime Encoding in Financial Sequence Models.</em> Do financial transformers encode regime information in superposition? We probe the residual stream of models trained on multi-asset return series to test whether trending and mean-reverting regimes occupy distinct directions in representation space, and whether these directions are recoverable with linear probes. Working paper, forthcoming.
+    </p>
+
+  </div>
+
+  <div class="contact-section" id="about">
+
+    <h2>About</h2>
+    <p>
+      Aletheia is the Greek and Heideggerian concept of unconcealment: the process by which truth emerges from hiddenness. Interpretability research is precisely this project applied to learned systems. The name was chosen deliberately.
+    </p>
+    <p>
+      Aletheia Laboratories was founded by <a href="https://aryasomu.com" target="_blank">Arya Somu</a>, Founder and CIO of <a href="https://monolithsystematic.com" target="_blank">Monolith Systematic LLC</a>. Work produced here is released publicly and is independent of any affiliated commercial entity.
+    </p>
+
+  </div>
+
+  <div class="contact-section" id="contact">
+
+    <h2>Contact</h2>
+    <p>
+      We welcome correspondence from researchers, collaborators, and anyone thinking seriously about the interpretability of learned systems.
+    </p>
+    <a class="btn" href="mailto:research@aletheialaboratories.com">research@aletheialaboratories.com</a>
+
+  </div>
+
+</div>
+
+<footer>
+  <span>Aletheia Laboratories &copy; 2026</span>
+  <span>&middot;</span>
+  <a href="https://aletheialaboratories.com">aletheialaboratories.com</a>
+</footer>
+
+</body>
+</html>
