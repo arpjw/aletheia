@@ -11,11 +11,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy: #1c2028;
+  --mauve: #6a4868;
   --cream: #f0ede6;
-  --cream-text: #ddd8ce;
-  --cream-dim: rgba(221,216,206,0.5);
-  --navy-rule: rgba(221,216,206,0.13);
+  --cream-text: #ede7df;
+  --cream-dim: rgba(237,231,223,0.52);
+  --mauve-rule: rgba(237,231,223,0.16);
   --steel: #8fa6bc;
   --body: #242424;
 }
@@ -58,7 +58,7 @@ nav a:hover { opacity: 0.45; }
 }
 
 .hero-left {
-  background: var(--navy);
+  background: var(--mauve);
   padding: 76px 52px 56px;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ nav a:hover { opacity: 0.45; }
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 260px;
-  background: radial-gradient(ellipse at 15% 100%, rgba(143,166,188,0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 15% 100%, rgba(255,200,190,0.09) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -89,7 +89,7 @@ nav a:hover { opacity: 0.45; }
 .hero-rule {
   width: 100%;
   height: 1px;
-  background: var(--navy-rule);
+  background: var(--mauve-rule);
   margin-bottom: 32px;
 }
 
@@ -108,13 +108,8 @@ nav a:hover { opacity: 0.45; }
   font-weight: 300;
 }
 
-.hero-copy p strong {
-  color: var(--cream-text);
-  font-weight: 400;
-}
-
+.hero-copy p strong { color: var(--cream-text); font-weight: 400; }
 .hero-copy p:last-child { margin-bottom: 0; }
-
 .hero-lower { margin-top: 36px; }
 
 .contact-label {
@@ -122,7 +117,7 @@ nav a:hover { opacity: 0.45; }
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(221,216,206,0.3);
+  color: rgba(237,231,223,0.32);
   margin-bottom: 7px;
 }
 
@@ -133,7 +128,6 @@ nav a:hover { opacity: 0.45; }
   color: var(--cream-text);
   text-decoration: none;
   margin-bottom: 24px;
-  letter-spacing: 0.01em;
 }
 
 .contact-email:hover { text-decoration: underline; text-decoration-color: var(--cream-text); }
@@ -143,7 +137,7 @@ nav a:hover { opacity: 0.45; }
 .hero-btn {
   display: inline-block;
   padding: 7px 18px;
-  border: 1px solid rgba(221,216,206,0.24);
+  border: 1px solid rgba(237,231,223,0.26);
   font-family: 'Spectral', serif;
   font-size: 10px;
   letter-spacing: 0.13em;
@@ -153,10 +147,7 @@ nav a:hover { opacity: 0.45; }
   transition: background 0.15s, border-color 0.15s;
 }
 
-.hero-btn:hover {
-  background: rgba(221,216,206,0.07);
-  border-color: rgba(221,216,206,0.48);
-}
+.hero-btn:hover { background: rgba(237,231,223,0.08); border-color: rgba(237,231,223,0.5); }
 
 .hero-right {
   background: var(--cream);
@@ -164,11 +155,7 @@ nav a:hover { opacity: 0.45; }
   position: relative;
 }
 
-.hero-right svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
+.hero-right svg { width: 100%; height: 100%; display: block; }
 
 .below-fold { background: var(--cream); }
 
@@ -178,10 +165,7 @@ nav a:hover { opacity: 0.45; }
   border-top: 1px solid rgba(36,36,36,0.08);
 }
 
-.section-label {
-  padding: 64px 52px;
-  border-right: 1px solid rgba(36,36,36,0.08);
-}
+.section-label { padding: 64px 52px; border-right: 1px solid rgba(36,36,36,0.08); }
 
 .section-label > span {
   font-family: 'Spectral', serif;
@@ -202,11 +186,7 @@ nav a:hover { opacity: 0.45; }
   border-bottom: 1px solid rgba(36,36,36,0.06);
 }
 
-.entry:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
+.entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
 .entry-head {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -228,17 +208,6 @@ nav a:hover { opacity: 0.45; }
 }
 
 .entry p:last-child { margin-bottom: 0; }
-.entry p em { font-style: italic; color: var(--body); }
-
-.paper-status {
-  display: block;
-  font-family: 'Spectral', serif;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #bbb;
-  margin-bottom: 11px;
-}
 
 a { color: var(--steel); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -300,8 +269,8 @@ footer a:hover { color: var(--body); text-decoration: underline; }
     <div class="hero-rule"></div>
     <div class="hero-body">
       <div class="hero-copy">
-        <p>Aletheia Laboratories was founded by researchers from Stanford, Princeton, MIT, Caltech, UC Berkeley, UCLA, the University of Washington, and Boston University. We came from neuroscience, computer science, electrical engineering, and medicine — eight institutions, one question.</p>
-        <p>What happens to the <strong>human mind</strong> at the moment of a trade? We built EEG headsets designed to detect the neural signatures of cognitive error in real time — to give the trader on the floor a tool for staying sharp when the stakes are highest. The science was working.</p>
+        <p>Aletheia Laboratories was founded by researchers from Stanford, Princeton, MIT, Caltech, UC Berkeley, UCLA, the University of Washington, and Boston University. We came from neuroscience, computer science, electrical engineering, and medicine &mdash; eight institutions, one question.</p>
+        <p>What happens to the <strong>human mind</strong> at the moment of a trade? We built EEG headsets designed to detect the neural signatures of cognitive error in real time &mdash; to give the trader on the floor a tool for staying sharp when the stakes are highest. The science was working.</p>
         <p>We could not find the funding. We could not find the lab testers. After eight months, we closed. The team scattered to medical schools, AI research labs, and frontier institutions where they remain today. We are getting back together.</p>
       </div>
       <div class="hero-lower">
@@ -318,146 +287,148 @@ footer a:hover { color: var(--body); text-decoration: underline; }
   <div class="hero-right">
     <svg viewBox="0 0 700 950" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
       <defs>
-        <radialGradient id="orbf" cx="370" cy="402" r="155" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#f8f2e5" stop-opacity="0.92"/>
-          <stop offset="42%" stop-color="#ecd8bc" stop-opacity="0.56"/>
-          <stop offset="100%" stop-color="#c8a870" stop-opacity="0"/>
+        <radialGradient id="orbf" cx="368" cy="398" r="155" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fdf0ec" stop-opacity="0.94"/>
+          <stop offset="38%" stop-color="#f0d0c8" stop-opacity="0.62"/>
+          <stop offset="100%" stop-color="#d4a090" stop-opacity="0"/>
         </radialGradient>
-        <radialGradient id="innerglow" cx="380" cy="396" r="118" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#faf5ec" stop-opacity="0.68"/>
+        <radialGradient id="innerglow" cx="380" cy="394" r="118" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fff5f0" stop-opacity="0.7"/>
           <stop offset="100%" stop-color="#f0ede6" stop-opacity="0"/>
         </radialGradient>
-        <radialGradient id="bgtint" cx="52%" cy="44%" r="52%">
-          <stop offset="0%" stop-color="#eceae1"/>
+        <radialGradient id="bgtint" cx="52%" cy="42%" r="54%">
+          <stop offset="0%" stop-color="#eae6dd"/>
           <stop offset="100%" stop-color="#f0ede6"/>
         </radialGradient>
         <clipPath id="orbclip">
-          <circle cx="380" cy="422" r="152"/>
+          <circle cx="380" cy="420" r="152"/>
         </clipPath>
       </defs>
 
-      <!-- Background -->
       <rect width="700" height="950" fill="url(#bgtint)"/>
 
-      <!-- Radial grid: 12 spokes from (380, 422) to r=305 -->
-      <g stroke="#c4beb4" stroke-width="0.55" fill="none" opacity="0.62">
-        <line x1="380" y1="422" x2="380" y2="117"/>
-        <line x1="380" y1="422" x2="532" y2="158"/>
-        <line x1="380" y1="422" x2="644" y2="270"/>
-        <line x1="380" y1="422" x2="685" y2="422"/>
-        <line x1="380" y1="422" x2="644" y2="574"/>
-        <line x1="380" y1="422" x2="532" y2="686"/>
-        <line x1="380" y1="422" x2="380" y2="727"/>
-        <line x1="380" y1="422" x2="228" y2="686"/>
-        <line x1="380" y1="422" x2="116" y2="574"/>
-        <line x1="380" y1="422" x2="75" y2="422"/>
-        <line x1="380" y1="422" x2="116" y2="270"/>
-        <line x1="380" y1="422" x2="228" y2="158"/>
+      <!-- Radial grid spokes -->
+      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.65">
+        <line x1="380" y1="420" x2="380" y2="115"/>
+        <line x1="380" y1="420" x2="532" y2="156"/>
+        <line x1="380" y1="420" x2="644" y2="268"/>
+        <line x1="380" y1="420" x2="685" y2="420"/>
+        <line x1="380" y1="420" x2="644" y2="572"/>
+        <line x1="380" y1="420" x2="532" y2="684"/>
+        <line x1="380" y1="420" x2="380" y2="725"/>
+        <line x1="380" y1="420" x2="228" y2="684"/>
+        <line x1="380" y1="420" x2="116" y2="572"/>
+        <line x1="380" y1="420" x2="75" y2="420"/>
+        <line x1="380" y1="420" x2="116" y2="268"/>
+        <line x1="380" y1="420" x2="228" y2="156"/>
       </g>
 
-      <!-- Concentric rings at (380, 422) -->
-      <g stroke="#c4beb4" stroke-width="0.55" fill="none" opacity="0.55">
-        <circle cx="380" cy="422" r="78"/>
-        <circle cx="380" cy="422" r="130"/>
-        <circle cx="380" cy="422" r="186"/>
-        <circle cx="380" cy="422" r="240"/>
-        <circle cx="380" cy="422" r="293"/>
+      <!-- Concentric rings -->
+      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.56">
+        <circle cx="380" cy="420" r="78"/>
+        <circle cx="380" cy="420" r="130"/>
+        <circle cx="380" cy="420" r="186"/>
+        <circle cx="380" cy="420" r="240"/>
+        <circle cx="380" cy="420" r="293"/>
       </g>
 
-      <!-- Outer dashed arc (top portion data-viz aesthetic) -->
-      <!-- Arc centered at (380,422), r=355. From θ=-135° to θ=-45° -->
-      <!-- θ=-135°: x=380+355*cos(-135°)=380-251=129, y=422+355*sin(-135°)=422-251=171 -->
-      <!-- θ=-45°:  x=380+251=631, y=171 -->
-      <path d="M 129 171 A 355 355 0 0 1 631 171" stroke="#b6afa4" stroke-width="0.85" fill="none" stroke-dasharray="4.5 6.5" opacity="0.58"/>
+      <!-- Outer dashed arc + tick marks -->
+      <path d="M 129 169 A 355 355 0 0 1 631 169" stroke="#b4ada2" stroke-width="0.85" fill="none" stroke-dasharray="4.5 6.5" opacity="0.54"/>
+      <line x1="380" y1="65" x2="380" y2="78" stroke="#b4ada2" stroke-width="1.1" opacity="0.64"/>
+      <line x1="247" y1="91" x2="252" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.52"/>
+      <line x1="513" y1="91" x2="508" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.52"/>
+      <line x1="176" y1="129" x2="182" y2="141" stroke="#b4ada2" stroke-width="0.78" opacity="0.46"/>
+      <line x1="584" y1="129" x2="578" y2="141" stroke="#b4ada2" stroke-width="0.78" opacity="0.46"/>
+      <text x="380" y="58" font-family="'Spectral', serif" font-size="9" fill="#ada69c" text-anchor="middle" letter-spacing="0.05em" opacity="0.78">230°</text>
+      <text x="234" y="84" font-family="'Spectral', serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.68">245°</text>
+      <text x="525" y="84" font-family="'Spectral', serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.68">215°</text>
 
-      <!-- Tick marks along outer arc -->
-      <!-- θ=-90° top: (380, 422-355)=(380,67) -->
-      <line x1="380" y1="67" x2="380" y2="80" stroke="#b6afa4" stroke-width="1.1" opacity="0.68"/>
-      <!-- θ=-112°: x=380+355*cos(-112°)=380-133=247, y=422+355*sin(-112°)=422-329=93 -->
-      <line x1="247" y1="93" x2="252" y2="105" stroke="#b6afa4" stroke-width="0.9" opacity="0.58"/>
-      <!-- θ=-68°: x=380+133=513, y=93 -->
-      <line x1="513" y1="93" x2="508" y2="105" stroke="#b6afa4" stroke-width="0.9" opacity="0.58"/>
-      <!-- θ=-125°: x=380+355*cos(-125°)=380-204=176, y=422+355*sin(-125°)=422-291=131 -->
-      <line x1="176" y1="131" x2="182" y2="143" stroke="#b6afa4" stroke-width="0.78" opacity="0.5"/>
-      <!-- θ=-55°: x=380+204=584, y=131 -->
-      <line x1="584" y1="131" x2="578" y2="143" stroke="#b6afa4" stroke-width="0.78" opacity="0.5"/>
-
-      <!-- Measurement numbers -->
-      <text x="380" y="60" font-family="'Spectral', serif" font-size="9" fill="#afa89e" text-anchor="middle" letter-spacing="0.05em" opacity="0.82">230°</text>
-      <text x="234" y="86" font-family="'Spectral', serif" font-size="9" fill="#afa89e" text-anchor="middle" opacity="0.72">245°</text>
-      <text x="525" y="86" font-family="'Spectral', serif" font-size="9" fill="#afa89e" text-anchor="middle" opacity="0.72">215°</text>
-      <text x="163" y="124" font-family="'Spectral', serif" font-size="9" fill="#afa89e" text-anchor="middle" opacity="0.6">260°</text>
-      <text x="596" y="124" font-family="'Spectral', serif" font-size="9" fill="#afa89e" text-anchor="middle" opacity="0.6">200°</text>
-
-      <!-- GEOMETRIC LANDSCAPE (back to front) -->
-      <!-- Far left background corner -->
-      <polygon points="0,950 0,778 58,752 90,778 74,950" fill="#2a4858" opacity="0.82"/>
-      <!-- Left teal -->
-      <polygon points="0,950 0,628 92,565 208,622 175,950" fill="#3e6878" opacity="0.89"/>
-      <!-- Left-center slate -->
-      <polygon points="60,950 115,634 250,588 338,636 308,950" fill="#345468" opacity="0.87"/>
-      <!-- Center-left dark navy -->
-      <polygon points="198,950 278,620 398,590 476,628 454,950" fill="#202e3e" opacity="0.93"/>
-      <!-- Center deepest (anchors orb base) -->
-      <polygon points="274,950 348,638 402,620 470,638 524,950" fill="#182432" opacity="0.97"/>
-      <!-- Center-right warm charcoal -->
-      <polygon points="398,950 458,630 562,602 636,634 612,950" fill="#483c2c" opacity="0.9"/>
-      <!-- Right gold-amber -->
-      <polygon points="506,950 564,626 658,594 700,626 700,950" fill="#926a20" opacity="0.87"/>
-      <!-- Far right olive -->
-      <polygon points="626,950 670,638 700,622 700,950" fill="#4c5a38" opacity="0.85"/>
-
-      <!-- Orb base ellipse shadow -->
-      <ellipse cx="380" cy="576" rx="90" ry="17" fill="#182432" opacity="0.65"/>
-
-      <!-- INNER ORB CONTENT (clipped) -->
+      <!-- Inner orb content -->
       <g clip-path="url(#orbclip)">
-        <!-- Dark inner mountain landscape -->
-        <polygon points="228,574 260,547 298,530 334,540 362,522 380,514 398,522 426,540 462,530 500,547 532,574 532,578 228,578"
-                 fill="#182432" opacity="0.76"/>
-        <!-- Inner atmospheric glow -->
-        <circle cx="380" cy="396" r="118" fill="url(#innerglow)"/>
-        <!-- Faint inner horizon suggestion -->
-        <line x1="232" y1="548" x2="528" y2="548" stroke="#2c3c50" stroke-width="0.6" opacity="0.28"/>
+        <polygon points="228,572 260,545 298,528 334,538 362,520 380,512 398,520 426,538 462,528 500,545 532,572 532,576 228,576" fill="#1c2838" opacity="0.66"/>
+        <circle cx="380" cy="394" r="118" fill="url(#innerglow)"/>
       </g>
 
-      <!-- Outer atmospheric halo ring -->
-      <circle cx="380" cy="422" r="165" fill="none" stroke="#d5cec0" stroke-width="2" opacity="0.26"/>
-      <!-- Main orb fill -->
-      <circle cx="380" cy="422" r="155" fill="url(#orbf)"/>
-      <!-- Orb ring stroke -->
-      <circle cx="380" cy="422" r="155" fill="none" stroke="#ccc6b5" stroke-width="0.9"/>
+      <!-- Orb -->
+      <circle cx="380" cy="420" r="166" fill="none" stroke="#e0c8c0" stroke-width="2" opacity="0.26"/>
+      <circle cx="380" cy="420" r="155" fill="url(#orbf)"/>
+      <circle cx="380" cy="420" r="155" fill="none" stroke="#d4beb2" stroke-width="0.9"/>
 
-      <!-- FIGURE SILHOUETTE -->
-      <circle cx="380" cy="493" r="7.5" fill="#182432" opacity="0.8"/>
-      <path d="M 369 501 C 367 501 365 509 366 523 L 374 523 L 380 515 L 386 523 L 394 523 C 395 509 393 501 391 501 Z"
-            fill="#182432" opacity="0.78"/>
+      <!-- Figure -->
+      <circle cx="380" cy="491" r="7.5" fill="#1c2838" opacity="0.76"/>
+      <path d="M 369 499 C 367 499 365 507 366 521 L 374 521 L 380 513 L 386 521 L 394 521 C 395 507 393 499 391 499 Z" fill="#1c2838" opacity="0.74"/>
 
-      <!-- ATTENTION / CIRCUIT NODES (at ~r=215 from orb center) -->
-      <g fill="#8fa6bc" opacity="0.7">
-        <circle cx="380" cy="207" r="4.5"/>
-        <circle cx="504" cy="248" r="3.5"/>
-        <circle cx="588" cy="370" r="4"/>
-        <circle cx="554" cy="510" r="3.5"/>
-        <circle cx="172" cy="478" r="3.5"/>
-        <circle cx="170" cy="366" r="4"/>
-        <circle cx="256" cy="248" r="3.5"/>
-        <circle cx="448" cy="214" r="3"/>
-        <circle cx="312" cy="214" r="3"/>
+      <!-- Attention nodes -->
+      <g fill="#8fa6bc" opacity="0.66">
+        <circle cx="380" cy="205" r="4.5"/>
+        <circle cx="504" cy="246" r="3.5"/>
+        <circle cx="590" cy="368" r="4"/>
+        <circle cx="556" cy="508" r="3.5"/>
+        <circle cx="172" cy="476" r="3.5"/>
+        <circle cx="170" cy="364" r="4"/>
+        <circle cx="256" cy="246" r="3.5"/>
+        <circle cx="448" cy="212" r="3"/>
+        <circle cx="312" cy="212" r="3"/>
+      </g>
+      <g stroke="#8fa6bc" stroke-width="0.55" fill="none" opacity="0.32" stroke-dasharray="3.5 5.5">
+        <line x1="380" y1="205" x2="504" y2="246"/>
+        <line x1="504" y1="246" x2="590" y2="368"/>
+        <line x1="590" y1="368" x2="556" y2="508"/>
+        <line x1="172" y1="476" x2="170" y2="364"/>
+        <line x1="170" y1="364" x2="256" y2="246"/>
+        <line x1="256" y1="246" x2="380" y2="205"/>
+        <line x1="380" y1="205" x2="448" y2="212"/>
+        <line x1="380" y1="205" x2="312" y2="212"/>
+        <line x1="256" y1="246" x2="504" y2="246"/>
       </g>
 
-      <!-- Connection lines between nodes -->
-      <g stroke="#8fa6bc" stroke-width="0.55" fill="none" opacity="0.36" stroke-dasharray="3.5 5.5">
-        <line x1="380" y1="207" x2="504" y2="248"/>
-        <line x1="504" y1="248" x2="588" y2="370"/>
-        <line x1="588" y1="370" x2="554" y2="510"/>
-        <line x1="172" y1="478" x2="170" y2="366"/>
-        <line x1="170" y1="366" x2="256" y2="248"/>
-        <line x1="256" y1="248" x2="380" y2="207"/>
-        <line x1="380" y1="207" x2="448" y2="214"/>
-        <line x1="380" y1="207" x2="312" y2="214"/>
-        <line x1="256" y1="248" x2="504" y2="248"/>
+      <!-- ─── ANIMATED ROLLING WAVES ─── -->
+      <!-- 6 layers, back to front. Each path: 7 full cycles at T=200 = 1400px wide.  -->
+      <!-- Animation: translateX by -200 (one period) = perfectly seamless loop.        -->
+      <!-- Phase offsets via different `from` values give organic wave interaction.      -->
+
+      <!-- W1: deep blue · slowest · furthest back -->
+      <g opacity="0.84">
+        <path fill="#1565c0" d="M 0 790 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 L 1400 950 L 0 950 Z">
+          <animateTransform attributeName="transform" type="translate" from="0 0" to="-200 0" dur="20s" repeatCount="indefinite"/>
+        </path>
       </g>
+
+      <!-- W2: deep teal -->
+      <g opacity="0.86">
+        <path fill="#00838f" d="M 0 766 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 L 1400 950 L 0 950 Z">
+          <animateTransform attributeName="transform" type="translate" from="-60 0" to="-260 0" dur="15s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- W3: teal-green -->
+      <g opacity="0.87">
+        <path fill="#1a8f6c" d="M 0 742 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 L 1400 950 L 0 950 Z">
+          <animateTransform attributeName="transform" type="translate" from="-120 0" to="-320 0" dur="12s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- W4: warm amber-gold -->
+      <g opacity="0.85">
+        <path fill="#c88818" d="M 0 718 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 L 1400 950 L 0 950 Z">
+          <animateTransform attributeName="transform" type="translate" from="-40 0" to="-240 0" dur="17s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- W5: vivid orange -->
+      <g opacity="0.87">
+        <path fill="#c45818" d="M 0 694 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 L 1400 950 L 0 950 Z">
+          <animateTransform attributeName="transform" type="translate" from="-80 0" to="-280 0" dur="10s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- W6: deep coral-red · fastest · foreground -->
+      <g opacity="0.83">
+        <path fill="#b03030" d="M 0 672 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 L 1400 950 L 0 950 Z">
+          <animateTransform attributeName="transform" type="translate" from="-160 0" to="-360 0" dur="7s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
     </svg>
   </div>
 </div>
@@ -470,12 +441,12 @@ footer a:hover { color: var(--body); text-decoration: underline; }
 
       <div class="entry">
         <div class="entry-head">Trading floors and the mind under pressure</div>
-        <p>High-frequency decision-making under financial stress produces measurable cognitive degradation — elevated cortisol, attentional narrowing, working memory impairment, and emotional dysregulation that compound across the session. The trader who has been at his desk for six hours is not the trader who sat down at the open. This was the problem we set out to instrument.</p>
+        <p>High-frequency decision-making under financial stress produces measurable cognitive degradation &mdash; elevated cortisol, attentional narrowing, working memory impairment, and emotional dysregulation that compound across the session. The trader who has been at his desk for six hours is not the trader who sat down at the open. This was the problem we set out to instrument.</p>
       </div>
 
       <div class="entry">
         <div class="entry-head">Neural signatures of cognitive error</div>
-        <p>EEG offers a window into the electrical activity of the brain at millisecond resolution. Specific frequency band signatures — elevated theta, suppressed alpha, frontal asymmetry in beta — are known correlates of stress-induced decision degradation. We built signal processing pipelines to detect these signatures in real time on a live trading desk, with the goal of providing the trader a closed-loop feedback intervention before the degraded decision was made.</p>
+        <p>EEG offers a window into the electrical activity of the brain at millisecond resolution. Specific frequency band signatures &mdash; elevated theta, suppressed alpha, frontal asymmetry in beta &mdash; are known correlates of stress-induced decision degradation. We built signal processing pipelines to detect these signatures in real time on a live trading desk, with the goal of providing the trader a closed-loop feedback intervention before the degraded decision was made.</p>
       </div>
 
       <div class="entry">
@@ -492,17 +463,17 @@ footer a:hover { color: var(--body); text-decoration: underline; }
 
       <div class="entry">
         <div class="entry-head">Eight institutions</div>
-        <p>The founding team was drawn from Stanford University, Princeton University, the Massachusetts Institute of Technology, the California Institute of Technology, UC Berkeley, UCLA, the University of Washington, and Boston University — researchers at different stages of their careers, across neuroscience, computer science, electrical engineering, and medicine, united by the belief that cognitive error on the trading floor was both measurable and addressable.</p>
+        <p>The founding team was drawn from Stanford University, Princeton University, the Massachusetts Institute of Technology, the California Institute of Technology, UC Berkeley, UCLA, the University of Washington, and Boston University &mdash; researchers at different stages of their careers, across neuroscience, computer science, electrical engineering, and medicine, united by the belief that cognitive error on the trading floor was both measurable and addressable.</p>
       </div>
 
       <div class="entry">
         <div class="entry-head">Eight months</div>
-        <p>We operated for eight months. The research reached a place we were genuinely proud of — the science held, the hardware worked, and the signal processing pipeline performed beyond what we had modeled in early design. We could not secure the funding the work required. We could not find the lab testers willing to let us sit behind them on a live desk. The combination was fatal. We closed.</p>
+        <p>We operated for eight months. The research reached a place we were genuinely proud of &mdash; the science held, the hardware worked, and the signal processing pipeline performed beyond what we had modeled in early design. We could not secure the funding the work required. We could not find the lab testers willing to let us sit behind them on a live desk. The combination was fatal. We closed.</p>
       </div>
 
       <div class="entry">
         <div class="entry-head">Where the team went</div>
-        <p>The founding researchers dispersed across medicine and artificial intelligence. They went to clinical research programs, to frontier AI laboratories, to doctoral work at the institutions where they had trained. They are still there — still at the edge of what is known in their respective fields. The product failed. The researchers did not. We are getting back together.</p>
+        <p>The founding researchers dispersed across medicine and artificial intelligence. They went to clinical research programs, to frontier AI laboratories, to doctoral work at the institutions where they had trained. They are still there &mdash; still at the edge of what is known in their respective fields. The product failed. The researchers did not. We are getting back together.</p>
       </div>
 
     </div>
