@@ -289,9 +289,8 @@ footer a:hover { color: var(--body); text-decoration: underline; }
 <body>
 
 <nav>
-  <a href="#research">Research</a>
-  <a href="#papers">Papers</a>
-  <a href="#about">About</a>
+  <a href="#science">Science</a>
+  <a href="#thelab">The Lab</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -301,16 +300,16 @@ footer a:hover { color: var(--body); text-decoration: underline; }
     <div class="hero-rule"></div>
     <div class="hero-body">
       <div class="hero-copy">
-        <p>Aletheia Laboratories is an independent artificial intelligence research initiative. We study the internal structure of learned systems to understand what they represent, how they compute, and why they fail.</p>
-        <p>The central problem in AI is not capability. It is <strong>legibility</strong>. The scientific community's understanding of what neural networks actually compute lags far behind rapidly advancing capabilities. Knowledge of how these systems develop internal representations is concentrated within a handful of frontier labs.</p>
-        <p>To close this gap, we conduct mechanistic interpretability research with a specific focus on sequential and financial domains — at the intersection of formal methods, financial time series, and the emerging science of neural circuits.</p>
+        <p>Aletheia Laboratories was founded by researchers from Stanford, Princeton, MIT, Caltech, UC Berkeley, UCLA, the University of Washington, and Boston University. We came from neuroscience, computer science, electrical engineering, and medicine — eight institutions, one question.</p>
+        <p>What happens to the <strong>human mind</strong> at the moment of a trade? We built EEG headsets designed to detect the neural signatures of cognitive error in real time — to give the trader on the floor a tool for staying sharp when the stakes are highest. The science was working.</p>
+        <p>We could not find the funding. We could not find the lab testers. After eight months, we closed. The team scattered to medical schools, AI research labs, and frontier institutions where they remain today. We are getting back together.</p>
       </div>
       <div class="hero-lower">
         <div class="contact-label">Get in touch</div>
         <a class="contact-email" href="mailto:research@aletheialaboratories.com">research@aletheialaboratories.com</a>
         <div class="hero-btns">
-          <a class="hero-btn" href="#research">Research</a>
-          <a class="hero-btn" href="#papers">Papers</a>
+          <a class="hero-btn" href="#science">Science</a>
+          <a class="hero-btn" href="#thelab">The Lab</a>
         </div>
       </div>
     </div>
@@ -465,56 +464,45 @@ footer a:hover { color: var(--body); text-decoration: underline; }
 
 <div class="below-fold">
 
-  <div class="section-row" id="research">
-    <div class="section-label"><span>Research</span></div>
+  <div class="section-row" id="science">
+    <div class="section-label"><span>Science</span></div>
     <div class="section-content">
 
       <div class="entry">
-        <div class="entry-head">Research is better when open</div>
-        <p><em>Scientific progress requires transparency.</em> We believe that advancing the field's understanding of AI systems requires sharing findings with the wider research community. We plan to publish papers, technical notes, and code. Sharing our work improves both the public discourse on AI and our own research culture.</p>
+        <div class="entry-head">Trading floors and the mind under pressure</div>
+        <p>High-frequency decision-making under financial stress produces measurable cognitive degradation — elevated cortisol, attentional narrowing, working memory impairment, and emotional dysregulation that compound across the session. The trader who has been at his desk for six hours is not the trader who sat down at the open. This was the problem we set out to instrument.</p>
       </div>
 
       <div class="entry">
-        <div class="entry-head">What circuits implement trend detection?</div>
-        <p><em>Circuits in financial neural networks.</em> What does a transformer actually compute when it learns to detect trend continuation in futures return series? We apply activation patching, probing classifiers, and residual stream decomposition to identify the computational structures underlying learned market behavior and test whether they correspond to known statistical phenomena.</p>
-        <p><em>Learned representations across regimes.</em> Neural networks trained on financial time series develop internal representations with no direct human analogue. We study the geometry of these representations across volatility regimes, asset classes, and model scales to understand what the residual stream encodes and when it breaks.</p>
+        <div class="entry-head">Neural signatures of cognitive error</div>
+        <p>EEG offers a window into the electrical activity of the brain at millisecond resolution. Specific frequency band signatures — elevated theta, suppressed alpha, frontal asymmetry in beta — are known correlates of stress-induced decision degradation. We built signal processing pipelines to detect these signatures in real time on a live trading desk, with the goal of providing the trader a closed-loop feedback intervention before the degraded decision was made.</p>
       </div>
 
       <div class="entry">
-        <div class="entry-head">Foundations of verifiable AI behavior</div>
-        <p><em>Formal verification of agent decision traces.</em> How do you prove that an AI agent did precisely what its mandate specified? Drawing from verifiable computation and formal methods, we develop cryptographically sound audit infrastructure for autonomous agents operating under economic constraints. The question of whether an agent's behavior can be independently verified is one of the most important open problems in AI deployment.</p>
-        <p><em>Synthetic microstructure for agent training.</em> Real market microstructure data is proprietary, expensive, and non-stationary. High-fidelity synthetic generation that preserves the statistical properties critical for training financial AI agents is an open research problem. We are building toward it.</p>
+        <div class="entry-head">The headset</div>
+        <p>We engineered a wearable EEG device calibrated for the trading environment: low-profile, minimal electrode footprint, robust to movement artifact and electromagnetic interference from trading floor infrastructure. The processing pipeline ran on-device at sub-200ms latency. We were proud of what we built. The science reached a place none of us had expected in the time we had.</p>
       </div>
 
     </div>
   </div>
 
-  <div class="section-row" id="papers">
-    <div class="section-label"><span>Papers</span></div>
+  <div class="section-row" id="thelab">
+    <div class="section-label"><span>The Lab</span></div>
     <div class="section-content">
 
       <div class="entry">
-        <span class="paper-status">Working paper &mdash; forthcoming</span>
-        <div class="entry-head">What Do Trend-Following Transformers Actually Compute?</div>
-        <p>A mechanistic analysis of transformer circuits trained on futures return series under a momentum objective. We identify the attention heads and MLP sublayers implementing the trend signal, test whether the learned circuit corresponds to a known statistical operation such as exponentially weighted averaging, and examine how circuit behavior shifts across volatility regime transitions.</p>
+        <div class="entry-head">Eight institutions</div>
+        <p>The founding team was drawn from Stanford University, Princeton University, the Massachusetts Institute of Technology, the California Institute of Technology, UC Berkeley, UCLA, the University of Washington, and Boston University — researchers at different stages of their careers, across neuroscience, computer science, electrical engineering, and medicine, united by the belief that cognitive error on the trading floor was both measurable and addressable.</p>
       </div>
 
       <div class="entry">
-        <span class="paper-status">Working paper &mdash; forthcoming</span>
-        <div class="entry-head">Superposition and Regime Encoding in Financial Sequence Models</div>
-        <p>Do financial transformers encode regime information in superposition? We probe the residual stream of models trained on multi-asset return series to test whether trending and mean-reverting regimes occupy distinct directions in representation space, and whether these directions are recoverable with linear probes.</p>
+        <div class="entry-head">Eight months</div>
+        <p>We operated for eight months. The research reached a place we were genuinely proud of — the science held, the hardware worked, and the signal processing pipeline performed beyond what we had modeled in early design. We could not secure the funding the work required. We could not find the lab testers willing to let us sit behind them on a live desk. The combination was fatal. We closed.</p>
       </div>
 
-    </div>
-  </div>
-
-  <div class="section-row" id="about">
-    <div class="section-label"><span>About</span></div>
-    <div class="section-content">
-
       <div class="entry">
-        <p>Aletheia is the Greek and Heideggerian concept of unconcealment: the process by which truth emerges from hiddenness. Interpretability research is precisely this project applied to learned systems. The name was chosen deliberately.</p>
-        <p>Aletheia Laboratories was founded by <a href="https://aryasomu.com" target="_blank">Arya Somu</a>, Founder and CIO of <a href="https://monolithsystematic.com" target="_blank">Monolith Systematic LLC</a>. Work produced here is released publicly and is independent of any affiliated commercial entity.</p>
+        <div class="entry-head">Where the team went</div>
+        <p>The founding researchers dispersed across medicine and artificial intelligence. They went to clinical research programs, to frontier AI laboratories, to doctoral work at the institutions where they had trained. They are still there — still at the edge of what is known in their respective fields. The product failed. The researchers did not. We are getting back together.</p>
       </div>
 
     </div>
@@ -525,7 +513,7 @@ footer a:hover { color: var(--body); text-decoration: underline; }
     <div class="section-content">
 
       <div class="entry">
-        <p>We welcome correspondence from researchers, collaborators, and anyone thinking seriously about the interpretability of learned systems.</p>
+        <p>We are reassembling. If you are a researcher, a trader, or a firm with access to a live trading environment and an interest in what we are doing, we want to hear from you.</p>
         <a class="contact-btn" href="mailto:research@aletheialaboratories.com">research@aletheialaboratories.com</a>
       </div>
 
