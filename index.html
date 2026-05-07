@@ -9,249 +9,61 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,600&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --mauve: #6a4868;
-  --cream: #f0ede6;
-  --cream-text: #ede7df;
-  --cream-dim: rgba(237,231,223,0.52);
-  --mauve-rule: rgba(237,231,223,0.16);
-  --steel: #8fa6bc;
-  --body: #242424;
+  --mauve: #6a4868; --cream: #f0ede6; --cream-text: #ede7df;
+  --cream-dim: rgba(237,231,223,0.52); --mauve-rule: rgba(237,231,223,0.16);
+  --steel: #8fa6bc; --body: #242424;
 }
-
 html { scroll-behavior: smooth; }
-
-body {
-  background: var(--cream);
-  color: var(--body);
-  font-family: 'Spectral', Georgia, serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-nav {
-  position: fixed;
-  top: 0; right: 0;
-  z-index: 200;
-  padding: 22px 44px;
-  display: flex;
-  gap: 30px;
-}
-
-nav a {
-  font-family: 'Spectral', serif;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--body);
-  text-decoration: none;
-  transition: opacity 0.15s;
-}
-
+body { background: var(--cream); color: var(--body); font-family: 'Spectral', Georgia, serif; -webkit-font-smoothing: antialiased; }
+nav { position: fixed; top: 0; right: 0; z-index: 200; padding: 22px 44px; display: flex; gap: 30px; }
+nav a { font-family: 'Spectral', serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--body); text-decoration: none; transition: opacity 0.15s; }
 nav a:hover { opacity: 0.45; }
-
-.hero {
-  display: grid;
-  grid-template-columns: 36% 64%;
-  height: 100vh;
-  min-height: 640px;
-}
-
-.hero-left {
-  background: var(--mauve);
-  padding: 76px 52px 56px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-left::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 260px;
-  background: radial-gradient(ellipse at 15% 100%, rgba(255,200,190,0.09) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.wordmark {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(24px, 2.6vw, 38px);
-  color: var(--cream-text);
-  letter-spacing: 0.025em;
-  line-height: 1.18;
-  margin-bottom: 28px;
-}
-
-.hero-rule {
-  width: 100%;
-  height: 1px;
-  background: var(--mauve-rule);
-  margin-bottom: 32px;
-}
-
-.hero-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hero-copy p {
-  font-size: 14.5px;
-  line-height: 1.84;
-  color: var(--cream-dim);
-  margin-bottom: 17px;
-  font-weight: 300;
-}
-
+.hero { display: grid; grid-template-columns: 36% 64%; height: 100vh; min-height: 640px; }
+.hero-left { background: var(--mauve); padding: 76px 52px 56px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.hero-left::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 260px; background: radial-gradient(ellipse at 15% 100%, rgba(255,200,190,0.09) 0%, transparent 70%); pointer-events: none; }
+.wordmark { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 300; font-size: clamp(24px, 2.6vw, 38px); color: var(--cream-text); letter-spacing: 0.025em; line-height: 1.18; margin-bottom: 28px; }
+.hero-rule { width: 100%; height: 1px; background: var(--mauve-rule); margin-bottom: 32px; }
+.hero-body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.hero-copy p { font-size: 14.5px; line-height: 1.84; color: var(--cream-dim); margin-bottom: 17px; font-weight: 300; }
 .hero-copy p strong { color: var(--cream-text); font-weight: 400; }
 .hero-copy p:last-child { margin-bottom: 0; }
 .hero-lower { margin-top: 36px; }
-
-.contact-label {
-  font-family: 'Spectral', serif;
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(237,231,223,0.32);
-  margin-bottom: 7px;
-}
-
-.contact-email {
-  display: block;
-  font-family: 'Spectral', serif;
-  font-size: 13px;
-  color: var(--cream-text);
-  text-decoration: none;
-  margin-bottom: 24px;
-}
-
-.contact-email:hover { text-decoration: underline; text-decoration-color: var(--cream-text); }
-
+.contact-label { font-family: 'Spectral', serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(237,231,223,0.32); margin-bottom: 7px; }
+.contact-email { display: block; font-family: 'Spectral', serif; font-size: 13px; color: var(--cream-text); text-decoration: none; margin-bottom: 24px; }
+.contact-email:hover { text-decoration: underline; }
 .hero-btns { display: flex; gap: 10px; }
-
-.hero-btn {
-  display: inline-block;
-  padding: 7px 18px;
-  border: 1px solid rgba(237,231,223,0.26);
-  font-family: 'Spectral', serif;
-  font-size: 10px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--cream-text);
-  text-decoration: none;
-  transition: background 0.15s, border-color 0.15s;
-}
-
+.hero-btn { display: inline-block; padding: 7px 18px; border: 1px solid rgba(237,231,223,0.26); font-family: 'Spectral', serif; font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--cream-text); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
 .hero-btn:hover { background: rgba(237,231,223,0.08); border-color: rgba(237,231,223,0.5); }
-
-.hero-right {
-  background: var(--cream);
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-right svg { width: 100%; height: 100%; display: block; }
-
+.hero-right { position: relative; overflow: hidden; background: var(--cream); }
+#wc { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; }
+.hero-right svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
 .below-fold { background: var(--cream); }
-
-.section-row {
-  display: grid;
-  grid-template-columns: 36% 64%;
-  border-top: 1px solid rgba(36,36,36,0.08);
-}
-
+.section-row { display: grid; grid-template-columns: 36% 64%; border-top: 1px solid rgba(36,36,36,0.08); }
 .section-label { padding: 64px 52px; border-right: 1px solid rgba(36,36,36,0.08); }
-
-.section-label > span {
-  font-family: 'Spectral', serif;
-  font-size: 10.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #aaa;
-  position: sticky;
-  top: 52px;
-  display: block;
-}
-
+.section-label > span { font-family: 'Spectral', serif; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; position: sticky; top: 52px; display: block; }
 .section-content { padding: 64px 64px 64px 52px; }
-
-.entry {
-  margin-bottom: 52px;
-  padding-bottom: 52px;
-  border-bottom: 1px solid rgba(36,36,36,0.06);
-}
-
+.entry { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid rgba(36,36,36,0.06); }
 .entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.entry-head {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 23px;
-  line-height: 1.32;
-  color: var(--body);
-  margin-bottom: 14px;
-  letter-spacing: 0.01em;
-}
-
-.entry p {
-  font-size: 15.5px;
-  line-height: 1.78;
-  color: #484848;
-  max-width: 580px;
-  margin-bottom: 14px;
-}
-
+.entry-head { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 400; font-size: 23px; line-height: 1.32; color: var(--body); margin-bottom: 14px; }
+.entry p { font-size: 15.5px; line-height: 1.78; color: #484848; max-width: 580px; margin-bottom: 14px; }
 .entry p:last-child { margin-bottom: 0; }
-
 a { color: var(--steel); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
-.contact-btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 9px 22px;
-  border: 1px solid rgba(36,36,36,0.17);
-  font-family: 'Spectral', serif;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--body);
-  text-decoration: none;
-  transition: background 0.15s;
-}
-
+.contact-btn { display: inline-block; margin-top: 18px; padding: 9px 22px; border: 1px solid rgba(36,36,36,0.17); font-family: 'Spectral', serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--body); text-decoration: none; transition: background 0.15s; }
 .contact-btn:hover { background: rgba(36,36,36,0.04); text-decoration: none; }
-
-footer {
-  border-top: 1px solid rgba(36,36,36,0.08);
-  padding: 22px 52px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Spectral', serif;
-  font-size: 12.5px;
-  color: #b0b0b0;
-  letter-spacing: 0.03em;
-}
-
+footer { border-top: 1px solid rgba(36,36,36,0.08); padding: 22px 52px; display: flex; justify-content: space-between; align-items: center; font-family: 'Spectral', serif; font-size: 12.5px; color: #b0b0b0; }
 footer a { color: #b0b0b0; text-decoration: none; }
 footer a:hover { color: var(--body); text-decoration: underline; }
-
 @media (max-width: 820px) {
-  .hero { grid-template-columns: 1fr; height: auto; min-height: unset; }
+  .hero { grid-template-columns: 1fr; height: auto; }
   .hero-left { padding: 84px 28px 48px; min-height: 68vw; }
-  .hero-right { height: 72vw; }
+  .hero-right { height: 80vw; }
   nav { padding: 18px 24px; gap: 18px; }
   .section-row { grid-template-columns: 1fr; }
   .section-label { padding: 44px 28px 10px; border-right: none; }
   .section-content { padding: 0 28px 52px; }
-  footer { padding: 18px 28px; flex-direction: column; gap: 6px; text-align: center; }
+  footer { padding: 18px 28px; flex-direction: column; gap: 6px; }
 }
 </style>
 </head>
@@ -285,218 +97,296 @@ footer a:hover { color: var(--body); text-decoration: underline; }
   </div>
 
   <div class="hero-right">
+    <canvas id="wc"></canvas>
+
     <svg viewBox="0 0 700 950" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
       <defs>
-        <radialGradient id="orbf" cx="368" cy="398" r="155" gradientUnits="userSpaceOnUse">
+        <radialGradient id="og" cx="368" cy="398" r="155" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stop-color="#fdf0ec" stop-opacity="0.94"/>
           <stop offset="38%" stop-color="#f0d0c8" stop-opacity="0.62"/>
           <stop offset="100%" stop-color="#d4a090" stop-opacity="0"/>
         </radialGradient>
-        <radialGradient id="innerglow" cx="380" cy="394" r="118" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#fff5f0" stop-opacity="0.7"/>
+        <radialGradient id="ig" cx="380" cy="394" r="118" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fff5f0" stop-opacity="0.72"/>
           <stop offset="100%" stop-color="#f0ede6" stop-opacity="0"/>
         </radialGradient>
-        <radialGradient id="bgtint" cx="52%" cy="42%" r="54%">
-          <stop offset="0%" stop-color="#eae6dd"/>
-          <stop offset="100%" stop-color="#f0ede6"/>
-        </radialGradient>
-        <clipPath id="orbclip">
-          <circle cx="380" cy="420" r="152"/>
-        </clipPath>
+        <clipPath id="oc"><circle cx="380" cy="420" r="152"/></clipPath>
       </defs>
-
-      <rect width="700" height="950" fill="url(#bgtint)"/>
-
-      <!-- Radial grid spokes -->
-      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.65">
-        <line x1="380" y1="420" x2="380" y2="115"/>
-        <line x1="380" y1="420" x2="532" y2="156"/>
-        <line x1="380" y1="420" x2="644" y2="268"/>
-        <line x1="380" y1="420" x2="685" y2="420"/>
-        <line x1="380" y1="420" x2="644" y2="572"/>
-        <line x1="380" y1="420" x2="532" y2="684"/>
-        <line x1="380" y1="420" x2="380" y2="725"/>
-        <line x1="380" y1="420" x2="228" y2="684"/>
-        <line x1="380" y1="420" x2="116" y2="572"/>
-        <line x1="380" y1="420" x2="75" y2="420"/>
-        <line x1="380" y1="420" x2="116" y2="268"/>
-        <line x1="380" y1="420" x2="228" y2="156"/>
+      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.58">
+        <line x1="380" y1="420" x2="380" y2="115"/><line x1="380" y1="420" x2="532" y2="156"/>
+        <line x1="380" y1="420" x2="644" y2="268"/><line x1="380" y1="420" x2="685" y2="420"/>
+        <line x1="380" y1="420" x2="644" y2="572"/><line x1="380" y1="420" x2="532" y2="684"/>
+        <line x1="380" y1="420" x2="380" y2="725"/><line x1="380" y1="420" x2="228" y2="684"/>
+        <line x1="380" y1="420" x2="116" y2="572"/><line x1="380" y1="420" x2="75" y2="420"/>
+        <line x1="380" y1="420" x2="116" y2="268"/><line x1="380" y1="420" x2="228" y2="156"/>
       </g>
-
-      <!-- Concentric rings -->
-      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.56">
-        <circle cx="380" cy="420" r="78"/>
-        <circle cx="380" cy="420" r="130"/>
-        <circle cx="380" cy="420" r="186"/>
-        <circle cx="380" cy="420" r="240"/>
+      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.48">
+        <circle cx="380" cy="420" r="78"/><circle cx="380" cy="420" r="130"/>
+        <circle cx="380" cy="420" r="186"/><circle cx="380" cy="420" r="240"/>
         <circle cx="380" cy="420" r="293"/>
       </g>
-
-      <!-- Outer dashed arc + tick marks -->
-      <path d="M 129 169 A 355 355 0 0 1 631 169" stroke="#b4ada2" stroke-width="0.85" fill="none" stroke-dasharray="4.5 6.5" opacity="0.54"/>
-      <line x1="380" y1="65" x2="380" y2="78" stroke="#b4ada2" stroke-width="1.1" opacity="0.64"/>
-      <line x1="247" y1="91" x2="252" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.52"/>
-      <line x1="513" y1="91" x2="508" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.52"/>
-      <line x1="176" y1="129" x2="182" y2="141" stroke="#b4ada2" stroke-width="0.78" opacity="0.46"/>
-      <line x1="584" y1="129" x2="578" y2="141" stroke="#b4ada2" stroke-width="0.78" opacity="0.46"/>
-      <text x="380" y="58" font-family="'Spectral', serif" font-size="9" fill="#ada69c" text-anchor="middle" letter-spacing="0.05em" opacity="0.78">230°</text>
-      <text x="234" y="84" font-family="'Spectral', serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.68">245°</text>
-      <text x="525" y="84" font-family="'Spectral', serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.68">215°</text>
-
-      <!-- Inner orb content -->
-      <g clip-path="url(#orbclip)">
-        <polygon points="228,572 260,545 298,528 334,538 362,520 380,512 398,520 426,538 462,528 500,545 532,572 532,576 228,576" fill="#1c2838" opacity="0.66"/>
-        <circle cx="380" cy="394" r="118" fill="url(#innerglow)"/>
+      <path d="M 129 169 A 355 355 0 0 1 631 169" stroke="#b4ada2" stroke-width="0.85" fill="none" stroke-dasharray="4.5 6.5" opacity="0.48"/>
+      <line x1="380" y1="65" x2="380" y2="78" stroke="#b4ada2" stroke-width="1.1" opacity="0.58"/>
+      <line x1="247" y1="91" x2="252" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.46"/>
+      <line x1="513" y1="91" x2="508" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.46"/>
+      <text x="380" y="58" font-family="'Spectral',serif" font-size="9" fill="#ada69c" text-anchor="middle" letter-spacing="0.05em" opacity="0.72">230°</text>
+      <text x="234" y="84" font-family="'Spectral',serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.62">245°</text>
+      <text x="525" y="84" font-family="'Spectral',serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.62">215°</text>
+      <g clip-path="url(#oc)">
+        <polygon points="228,572 260,545 298,528 334,538 362,520 380,512 398,520 426,538 462,528 500,545 532,572 532,576 228,576" fill="#1c2838" opacity="0.58"/>
+        <circle cx="380" cy="394" r="118" fill="url(#ig)"/>
       </g>
-
-      <!-- Orb -->
-      <circle cx="380" cy="420" r="166" fill="none" stroke="#e0c8c0" stroke-width="2" opacity="0.26"/>
-      <circle cx="380" cy="420" r="155" fill="url(#orbf)"/>
+      <circle cx="380" cy="420" r="166" fill="none" stroke="#e0c8c0" stroke-width="2" opacity="0.20"/>
+      <circle cx="380" cy="420" r="155" fill="url(#og)"/>
       <circle cx="380" cy="420" r="155" fill="none" stroke="#d4beb2" stroke-width="0.9"/>
-
-      <!-- Figure -->
-      <circle cx="380" cy="491" r="7.5" fill="#1c2838" opacity="0.76"/>
-      <path d="M 369 499 C 367 499 365 507 366 521 L 374 521 L 380 513 L 386 521 L 394 521 C 395 507 393 499 391 499 Z" fill="#1c2838" opacity="0.74"/>
-
-      <!-- Attention nodes -->
-      <g fill="#8fa6bc" opacity="0.66">
-        <circle cx="380" cy="205" r="4.5"/>
-        <circle cx="504" cy="246" r="3.5"/>
-        <circle cx="590" cy="368" r="4"/>
-        <circle cx="556" cy="508" r="3.5"/>
-        <circle cx="172" cy="476" r="3.5"/>
-        <circle cx="170" cy="364" r="4"/>
-        <circle cx="256" cy="246" r="3.5"/>
-        <circle cx="448" cy="212" r="3"/>
+      <circle cx="380" cy="491" r="7.5" fill="#1c2838" opacity="0.70"/>
+      <path d="M 369 499 C 367 499 365 507 366 521 L 374 521 L 380 513 L 386 521 L 394 521 C 395 507 393 499 391 499 Z" fill="#1c2838" opacity="0.68"/>
+      <g fill="#8fa6bc" opacity="0.60">
+        <circle cx="380" cy="205" r="4.5"/><circle cx="504" cy="246" r="3.5"/>
+        <circle cx="590" cy="368" r="4"/><circle cx="556" cy="508" r="3.5"/>
+        <circle cx="172" cy="476" r="3.5"/><circle cx="170" cy="364" r="4"/>
+        <circle cx="256" cy="246" r="3.5"/><circle cx="448" cy="212" r="3"/>
         <circle cx="312" cy="212" r="3"/>
       </g>
-      <g stroke="#8fa6bc" stroke-width="0.55" fill="none" opacity="0.32" stroke-dasharray="3.5 5.5">
-        <line x1="380" y1="205" x2="504" y2="246"/>
-        <line x1="504" y1="246" x2="590" y2="368"/>
-        <line x1="590" y1="368" x2="556" y2="508"/>
-        <line x1="172" y1="476" x2="170" y2="364"/>
-        <line x1="170" y1="364" x2="256" y2="246"/>
-        <line x1="256" y1="246" x2="380" y2="205"/>
-        <line x1="380" y1="205" x2="448" y2="212"/>
-        <line x1="380" y1="205" x2="312" y2="212"/>
+      <g stroke="#8fa6bc" stroke-width="0.55" fill="none" opacity="0.26" stroke-dasharray="3.5 5.5">
+        <line x1="380" y1="205" x2="504" y2="246"/><line x1="504" y1="246" x2="590" y2="368"/>
+        <line x1="590" y1="368" x2="556" y2="508"/><line x1="172" y1="476" x2="170" y2="364"/>
+        <line x1="170" y1="364" x2="256" y2="246"/><line x1="256" y1="246" x2="380" y2="205"/>
+        <line x1="380" y1="205" x2="448" y2="212"/><line x1="380" y1="205" x2="312" y2="212"/>
         <line x1="256" y1="246" x2="504" y2="246"/>
       </g>
-
-      <!-- ─── ANIMATED ROLLING WAVES ─── -->
-      <!-- 6 layers, back to front. Each path: 7 full cycles at T=200 = 1400px wide.  -->
-      <!-- Animation: translateX by -200 (one period) = perfectly seamless loop.        -->
-      <!-- Phase offsets via different `from` values give organic wave interaction.      -->
-
-      <!-- W1: deep blue · slowest · furthest back -->
-      <g opacity="0.84">
-        <path fill="#1565c0" d="M 0 790 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 q 50 -16 100 0 q 50 16 100 0 L 1400 950 L 0 950 Z">
-          <animateTransform attributeName="transform" type="translate" from="0 0" to="-200 0" dur="20s" repeatCount="indefinite"/>
-        </path>
-      </g>
-
-      <!-- W2: deep teal -->
-      <g opacity="0.86">
-        <path fill="#00838f" d="M 0 766 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 q 50 -20 100 0 q 50 20 100 0 L 1400 950 L 0 950 Z">
-          <animateTransform attributeName="transform" type="translate" from="-60 0" to="-260 0" dur="15s" repeatCount="indefinite"/>
-        </path>
-      </g>
-
-      <!-- W3: teal-green -->
-      <g opacity="0.87">
-        <path fill="#1a8f6c" d="M 0 742 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 q 50 -24 100 0 q 50 24 100 0 L 1400 950 L 0 950 Z">
-          <animateTransform attributeName="transform" type="translate" from="-120 0" to="-320 0" dur="12s" repeatCount="indefinite"/>
-        </path>
-      </g>
-
-      <!-- W4: warm amber-gold -->
-      <g opacity="0.85">
-        <path fill="#c88818" d="M 0 718 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 q 50 -26 100 0 q 50 26 100 0 L 1400 950 L 0 950 Z">
-          <animateTransform attributeName="transform" type="translate" from="-40 0" to="-240 0" dur="17s" repeatCount="indefinite"/>
-        </path>
-      </g>
-
-      <!-- W5: vivid orange -->
-      <g opacity="0.87">
-        <path fill="#c45818" d="M 0 694 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 q 50 -30 100 0 q 50 30 100 0 L 1400 950 L 0 950 Z">
-          <animateTransform attributeName="transform" type="translate" from="-80 0" to="-280 0" dur="10s" repeatCount="indefinite"/>
-        </path>
-      </g>
-
-      <!-- W6: deep coral-red · fastest · foreground -->
-      <g opacity="0.83">
-        <path fill="#b03030" d="M 0 672 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 q 50 -33 100 0 q 50 33 100 0 L 1400 950 L 0 950 Z">
-          <animateTransform attributeName="transform" type="translate" from="-160 0" to="-360 0" dur="7s" repeatCount="indefinite"/>
-        </path>
-      </g>
-
     </svg>
   </div>
 </div>
 
 <div class="below-fold">
-
   <div class="section-row" id="science">
     <div class="section-label"><span>Science</span></div>
     <div class="section-content">
-
       <div class="entry">
         <div class="entry-head">Trading floors and the mind under pressure</div>
         <p>High-frequency decision-making under financial stress produces measurable cognitive degradation &mdash; elevated cortisol, attentional narrowing, working memory impairment, and emotional dysregulation that compound across the session. The trader who has been at his desk for six hours is not the trader who sat down at the open. This was the problem we set out to instrument.</p>
       </div>
-
       <div class="entry">
         <div class="entry-head">Neural signatures of cognitive error</div>
         <p>EEG offers a window into the electrical activity of the brain at millisecond resolution. Specific frequency band signatures &mdash; elevated theta, suppressed alpha, frontal asymmetry in beta &mdash; are known correlates of stress-induced decision degradation. We built signal processing pipelines to detect these signatures in real time on a live trading desk, with the goal of providing the trader a closed-loop feedback intervention before the degraded decision was made.</p>
       </div>
-
       <div class="entry">
         <div class="entry-head">The headset</div>
         <p>We engineered a wearable EEG device calibrated for the trading environment: low-profile, minimal electrode footprint, robust to movement artifact and electromagnetic interference from trading floor infrastructure. The processing pipeline ran on-device at sub-200ms latency. We were proud of what we built. The science reached a place none of us had expected in the time we had.</p>
       </div>
-
     </div>
   </div>
-
   <div class="section-row" id="thelab">
     <div class="section-label"><span>The Lab</span></div>
     <div class="section-content">
-
       <div class="entry">
         <div class="entry-head">Eight institutions</div>
         <p>The founding team was drawn from Stanford University, Princeton University, the Massachusetts Institute of Technology, the California Institute of Technology, UC Berkeley, UCLA, the University of Washington, and Boston University &mdash; researchers at different stages of their careers, across neuroscience, computer science, electrical engineering, and medicine, united by the belief that cognitive error on the trading floor was both measurable and addressable.</p>
       </div>
-
       <div class="entry">
         <div class="entry-head">Eight months</div>
         <p>We operated for eight months. The research reached a place we were genuinely proud of &mdash; the science held, the hardware worked, and the signal processing pipeline performed beyond what we had modeled in early design. We could not secure the funding the work required. We could not find the lab testers willing to let us sit behind them on a live desk. The combination was fatal. We closed.</p>
       </div>
-
       <div class="entry">
         <div class="entry-head">Where the team went</div>
         <p>The founding researchers dispersed across medicine and artificial intelligence. They went to clinical research programs, to frontier AI laboratories, to doctoral work at the institutions where they had trained. They are still there &mdash; still at the edge of what is known in their respective fields. The product failed. The researchers did not. We are getting back together.</p>
       </div>
-
     </div>
   </div>
-
   <div class="section-row" id="contact">
     <div class="section-label"><span>Contact</span></div>
     <div class="section-content">
-
       <div class="entry">
         <p>We are reassembling. If you are a researcher, a trader, or a firm with access to a live trading environment and an interest in what we are doing, we want to hear from you.</p>
         <a class="contact-btn" href="mailto:research@aletheialaboratories.com">research@aletheialaboratories.com</a>
       </div>
-
     </div>
   </div>
-
 </div>
 
 <footer>
   <span>Aletheia Laboratories &copy; 2026</span>
   <a href="https://aletheialaboratories.com">aletheialaboratories.com</a>
 </footer>
+
+<script>
+(function () {
+  'use strict';
+  const canvas = document.getElementById('wc');
+  const ctx    = canvas.getContext('2d');
+  const TAU    = Math.PI * 2;
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // WAVE MODEL
+  //
+  // Each layer has N carrier wave components. Every component is a
+  // GERSTNER WAVE modulated by two amplitude envelopes:
+  //
+  //   y(x,t) = Σ_k  A_k · ENV_k(x,t) · PROFILE_k(x,t)
+  //
+  // PROFILE uses the trochoidal (Gerstner) shape:
+  //   profile = sin(θ) + Q·½·sin(2θ) + Q²·⅛·sin(3θ)
+  //   where θ = 2π(x/λ − f·t) + φ  (traveling wave)
+  //   Q ∈ [0,1]: steepness → peaked crests, flat troughs
+  //
+  // ENV = slow_envelope × fast_envelope
+  //   slow_env = 0.5 + 0.5·sin(2π(x/Λ₁ − F₁·t) + Φ₁)   [group swell]
+  //   fast_env = 0.7 + 0.3·sin(2π(x/Λ₂ − F₂·t) + Φ₂)   [set modulation]
+  //
+  // Because F₁, F₂ are incommensurable with f, envelope peaks roam
+  // independently across the surface → waves swell up, crash, recede
+  // at completely different locations and times. No synchrony.
+  // ═══════════════════════════════════════════════════════════════════════
+
+  const LAYERS = [
+    // ── Layer 0 · deep cobalt · back · slow long swells ────────────────
+    { r:15,  g:78,  b:192, base:0.895, amp:0.135, segs:55, components:[
+      { A:.50, lam:.60, f:.160, phi:0.00, Q:.22, L1:3.30, F1:.048, P1:0.00, L2:1.70, F2:.088, P2:1.80 },
+      { A:.28, lam:.37, f:.259, phi:1.57, Q:.30, L1:2.80, F1:.063, P1:3.50, L2:1.30, F2:.113, P2:4.20 },
+      { A:.14, lam:.22, f:.421, phi:3.14, Q:.38, L1:2.10, F1:.081, P1:1.20, L2:0.95, F2:.148, P2:2.90 },
+      { A:.08, lam:.14, f:.686, phi:0.85, Q:.46, L1:1.50, F1:.104, P1:5.00, L2:0.72, F2:.191, P2:0.50 },
+    ]},
+    // ── Layer 1 · cyan-teal ────────────────────────────────────────────
+    { r:0,   g:130, b:145, base:0.820, amp:0.155, segs:58, components:[
+      { A:.48, lam:.56, f:.183, phi:0.90, Q:.28, L1:3.10, F1:.055, P1:1.40, L2:1.55, F2:.099, P2:3.10 },
+      { A:.30, lam:.33, f:.300, phi:2.40, Q:.36, L1:2.55, F1:.072, P1:4.20, L2:1.20, F2:.129, P2:0.80 },
+      { A:.14, lam:.20, f:.490, phi:1.00, Q:.44, L1:1.90, F1:.093, P1:2.80, L2:0.88, F2:.169, P2:5.10 },
+      { A:.08, lam:.13, f:.800, phi:3.80, Q:.52, L1:1.35, F1:.120, P1:0.40, L2:0.65, F2:.218, P2:2.30 },
+    ]},
+    // ── Layer 2 · forest green ─────────────────────────────────────────
+    { r:28,  g:148, b:72,  base:0.748, amp:0.172, segs:60, components:[
+      { A:.46, lam:.53, f:.207, phi:1.80, Q:.32, L1:2.90, F1:.062, P1:2.90, L2:1.42, F2:.111, P2:0.70 },
+      { A:.30, lam:.31, f:.342, phi:0.40, Q:.40, L1:2.35, F1:.082, P1:5.50, L2:1.10, F2:.146, P2:3.90 },
+      { A:.15, lam:.19, f:.558, phi:2.90, Q:.49, L1:1.75, F1:.105, P1:1.60, L2:0.82, F2:.191, P2:1.20 },
+      { A:.09, lam:.12, f:.910, phi:1.50, Q:.57, L1:1.22, F1:.136, P1:4.30, L2:0.60, F2:.247, P2:4.80 },
+    ]},
+    // ── Layer 3 · amber-gold ───────────────────────────────────────────
+    { r:198, g:138, b:8,   base:0.672, amp:0.192, segs:62, components:[
+      { A:.44, lam:.50, f:.234, phi:2.60, Q:.38, L1:2.70, F1:.070, P1:4.40, L2:1.30, F2:.124, P2:2.20 },
+      { A:.30, lam:.29, f:.390, phi:0.70, Q:.46, L1:2.15, F1:.092, P1:1.00, L2:1.00, F2:.164, P2:5.60 },
+      { A:.16, lam:.17, f:.635, phi:3.50, Q:.55, L1:1.60, F1:.119, P1:3.20, L2:0.75, F2:.213, P2:0.90 },
+      { A:.10, lam:.11, f:1.04, phi:0.30, Q:.62, L1:1.12, F1:.154, P1:6.10, L2:0.55, F2:.275, P2:3.50 },
+    ]},
+    // ── Layer 4 · deep orange ─────────────────────────────────────────
+    { r:202, g:72,  b:14,  base:0.600, amp:0.188, segs:64, components:[
+      { A:.43, lam:.47, f:.262, phi:0.50, Q:.44, L1:2.50, F1:.079, P1:5.80, L2:1.18, F2:.140, P2:3.70 },
+      { A:.30, lam:.27, f:.444, phi:2.10, Q:.52, L1:1.95, F1:.104, P1:2.10, L2:0.90, F2:.184, P2:1.40 },
+      { A:.17, lam:.16, f:.725, phi:4.10, Q:.60, L1:1.44, F1:.134, P1:0.30, L2:0.68, F2:.239, P2:5.90 },
+      { A:.10, lam:.10, f:1.18, phi:1.50, Q:.67, L1:1.00, F1:.174, P1:3.90, L2:0.50, F2:.309, P2:2.10 },
+    ]},
+    // ── Layer 5 · terra cotta · front · fastest · most peaked ─────────
+    { r:150, g:42,  b:36,  base:0.540, amp:0.148, segs:66, components:[
+      { A:.41, lam:.44, f:.295, phi:1.70, Q:.52, L1:2.30, F1:.089, P1:1.20, L2:1.05, F2:.157, P2:4.60 },
+      { A:.31, lam:.25, f:.505, phi:3.30, Q:.59, L1:1.78, F1:.117, P1:3.80, L2:0.82, F2:.207, P2:0.20 },
+      { A:.18, lam:.15, f:.841, phi:0.90, Q:.66, L1:1.30, F1:.151, P1:6.00, L2:0.62, F2:.268, P2:3.30 },
+      { A:.10, lam:.09, f:1.40, phi:2.50, Q:.72, L1:0.90, F1:.196, P1:2.50, L2:0.45, F2:.347, P2:1.00 },
+    ]},
+  ];
+
+  // Pre-compute per-layer amplitude norm so displacement ∈ [-1, 1]
+  LAYERS.forEach(L => {
+    L._norm = L.components.reduce((s, c) => s + c.A, 0);
+  });
+
+  let W = 1, H = 1, t0 = null;
+
+  function resize() {
+    const p = canvas.parentElement;
+    W = canvas.width  = p.offsetWidth;
+    H = canvas.height = p.offsetHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // ── Gerstner surface displacement at normalised x ∈ [0,1], time t (s) ─
+  function surfaceY(xN, t, L) {
+    let h = 0;
+    for (const c of L.components) {
+      // Carrier phase (traveling left)
+      const θ = TAU * (xN / c.lam - c.f * t) + c.phi;
+
+      // Trochoidal (Gerstner) profile → peaked crests, flat troughs
+      const Q   = c.Q;
+      const profile = Math.sin(θ)
+                    + Q * 0.500 * Math.sin(2 * θ)
+                    + Q * Q * 0.125 * Math.sin(3 * θ);
+
+      // Wave group envelopes — independently traveling
+      // slow: determines which "set" is arriving
+      const e1 = 0.50 + 0.50 * Math.sin(TAU * (xN / c.L1 - c.F1 * t) + c.P1);
+      // fast: fine-grained set modulation
+      const e2 = 0.68 + 0.32 * Math.sin(TAU * (xN / c.L2 - c.F2 * t) + c.P2);
+
+      h += c.A * e1 * e2 * profile;
+    }
+    // Normalise; apply layer amplitude in canvas pixels
+    return H * L.base - (h / L._norm) * L.amp * H;
+  }
+
+  // ── Draw one terrain layer ────────────────────────────────────────────
+  function drawLayer(L, t) {
+    const segs = L.segs;
+    const dx   = W / segs;
+    const yB   = H + 2;
+    const clamp = v => Math.max(0, Math.min(255, Math.round(v)));
+
+    for (let i = 0; i < segs; i++) {
+      const x0 = i * dx,        x1 = (i + 1) * dx;
+      const y0 = surfaceY(x0 / W, t, L);
+      const y1 = surfaceY(x1 / W, t, L);
+
+      // Directional light: slope drives face brightness
+      // (negative slope = face tilted toward light = brighter)
+      const slope  = (y1 - y0) / dx;
+      const light  = -slope * 72;
+      // Small high-frequency jitter to break up facets further
+      const jitter = Math.sin(i * 11.3 + t * 1.1) * 7
+                   + Math.sin(i *  5.7 - t * 0.7) * 5;
+      const v = light + jitter;
+
+      // Upper triangle — slopes toward viewer, lighter
+      ctx.beginPath();
+      ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.lineTo(x1, yB);
+      ctx.closePath();
+      ctx.fillStyle = `rgb(${clamp(L.r+v)},${clamp(L.g+v*.72)},${clamp(L.b+v*.52)})`;
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.26)';
+      ctx.lineWidth   = 0.7;
+      ctx.stroke();
+
+      // Lower triangle — back face, darker
+      ctx.beginPath();
+      ctx.moveTo(x0, y0); ctx.lineTo(x1, yB); ctx.lineTo(x0, yB);
+      ctx.closePath();
+      ctx.fillStyle = `rgb(${clamp(L.r-v*.5)},${clamp(L.g-v*.38)},${clamp(L.b-v*.28)})`;
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.26)';
+      ctx.lineWidth   = 0.7;
+      ctx.stroke();
+    }
+  }
+
+  // ── Render loop ───────────────────────────────────────────────────────
+  function frame(ts) {
+    if (!t0) t0 = ts;
+    const t = (ts - t0) / 1000;
+
+    // Cream background
+    const bg = ctx.createRadialGradient(W*.50, H*.36, 0, W*.50, H*.36, W*.64);
+    bg.addColorStop(0, '#eae6dd');
+    bg.addColorStop(1, '#f0ede6');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, W, H);
+
+    for (const L of LAYERS) drawLayer(L, t);
+
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+})();
+</script>
 
 </body>
 </html>
