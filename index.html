@@ -10,60 +10,60 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --mauve: #6a4868; --cream: #f0ede6; --cream-text: #ede7df;
-  --cream-dim: rgba(237,231,223,0.52); --mauve-rule: rgba(237,231,223,0.16);
-  --steel: #8fa6bc; --body: #242424;
+  --mauve:#6a4868; --cream:#f0ede6; --cream-text:#ede7df;
+  --cream-dim:rgba(237,231,223,0.52); --mauve-rule:rgba(237,231,223,0.16);
+  --steel:#8fa6bc; --body:#242424;
 }
-html { scroll-behavior: smooth; }
-body { background: var(--cream); color: var(--body); font-family: 'Spectral', Georgia, serif; -webkit-font-smoothing: antialiased; }
-nav { position: fixed; top: 0; right: 0; z-index: 200; padding: 22px 44px; display: flex; gap: 30px; }
-nav a { font-family: 'Spectral', serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--body); text-decoration: none; transition: opacity 0.15s; }
-nav a:hover { opacity: 0.45; }
-.hero { display: grid; grid-template-columns: 36% 64%; height: 100vh; min-height: 640px; }
-.hero-left { background: var(--mauve); padding: 76px 52px 56px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
-.hero-left::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 260px; background: radial-gradient(ellipse at 15% 100%, rgba(255,200,190,0.09) 0%, transparent 70%); pointer-events: none; }
-.wordmark { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 300; font-size: clamp(24px, 2.6vw, 38px); color: var(--cream-text); letter-spacing: 0.025em; line-height: 1.18; margin-bottom: 28px; }
-.hero-rule { width: 100%; height: 1px; background: var(--mauve-rule); margin-bottom: 32px; }
-.hero-body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-.hero-copy p { font-size: 14.5px; line-height: 1.84; color: var(--cream-dim); margin-bottom: 17px; font-weight: 300; }
-.hero-copy p strong { color: var(--cream-text); font-weight: 400; }
-.hero-copy p:last-child { margin-bottom: 0; }
-.hero-lower { margin-top: 36px; }
-.contact-label { font-family: 'Spectral', serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(237,231,223,0.32); margin-bottom: 7px; }
-.contact-email { display: block; font-family: 'Spectral', serif; font-size: 13px; color: var(--cream-text); text-decoration: none; margin-bottom: 24px; }
-.contact-email:hover { text-decoration: underline; }
-.hero-btns { display: flex; gap: 10px; }
-.hero-btn { display: inline-block; padding: 7px 18px; border: 1px solid rgba(237,231,223,0.26); font-family: 'Spectral', serif; font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--cream-text); text-decoration: none; transition: background 0.15s, border-color 0.15s; }
-.hero-btn:hover { background: rgba(237,231,223,0.08); border-color: rgba(237,231,223,0.5); }
-.hero-right { position: relative; overflow: hidden; background: var(--cream); }
-#wc { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; }
-.hero-right svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
-.below-fold { background: var(--cream); }
-.section-row { display: grid; grid-template-columns: 36% 64%; border-top: 1px solid rgba(36,36,36,0.08); }
-.section-label { padding: 64px 52px; border-right: 1px solid rgba(36,36,36,0.08); }
-.section-label > span { font-family: 'Spectral', serif; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; position: sticky; top: 52px; display: block; }
-.section-content { padding: 64px 64px 64px 52px; }
-.entry { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid rgba(36,36,36,0.06); }
-.entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.entry-head { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 400; font-size: 23px; line-height: 1.32; color: var(--body); margin-bottom: 14px; }
-.entry p { font-size: 15.5px; line-height: 1.78; color: #484848; max-width: 580px; margin-bottom: 14px; }
-.entry p:last-child { margin-bottom: 0; }
-a { color: var(--steel); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.contact-btn { display: inline-block; margin-top: 18px; padding: 9px 22px; border: 1px solid rgba(36,36,36,0.17); font-family: 'Spectral', serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--body); text-decoration: none; transition: background 0.15s; }
-.contact-btn:hover { background: rgba(36,36,36,0.04); text-decoration: none; }
-footer { border-top: 1px solid rgba(36,36,36,0.08); padding: 22px 52px; display: flex; justify-content: space-between; align-items: center; font-family: 'Spectral', serif; font-size: 12.5px; color: #b0b0b0; }
-footer a { color: #b0b0b0; text-decoration: none; }
-footer a:hover { color: var(--body); text-decoration: underline; }
-@media (max-width: 820px) {
-  .hero { grid-template-columns: 1fr; height: auto; }
-  .hero-left { padding: 84px 28px 48px; min-height: 68vw; }
-  .hero-right { height: 80vw; }
-  nav { padding: 18px 24px; gap: 18px; }
-  .section-row { grid-template-columns: 1fr; }
-  .section-label { padding: 44px 28px 10px; border-right: none; }
-  .section-content { padding: 0 28px 52px; }
-  footer { padding: 18px 28px; flex-direction: column; gap: 6px; }
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--body);font-family:'Spectral',Georgia,serif;-webkit-font-smoothing:antialiased;}
+nav{position:fixed;top:0;right:0;z-index:200;padding:22px 44px;display:flex;gap:30px;}
+nav a{font-family:'Spectral',serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--body);text-decoration:none;transition:opacity .15s;}
+nav a:hover{opacity:.45;}
+.hero{display:grid;grid-template-columns:36% 64%;height:100vh;min-height:640px;}
+.hero-left{background:var(--mauve);padding:76px 52px 56px;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+.hero-left::after{content:'';position:absolute;bottom:0;left:0;right:0;height:260px;background:radial-gradient(ellipse at 15% 100%,rgba(255,200,190,.09) 0%,transparent 70%);pointer-events:none;}
+.wordmark{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(24px,2.6vw,38px);color:var(--cream-text);letter-spacing:.025em;line-height:1.18;margin-bottom:28px;}
+.hero-rule{width:100%;height:1px;background:var(--mauve-rule);margin-bottom:32px;}
+.hero-body{flex:1;display:flex;flex-direction:column;justify-content:space-between;}
+.hero-copy p{font-size:14.5px;line-height:1.84;color:var(--cream-dim);margin-bottom:17px;font-weight:300;}
+.hero-copy p strong{color:var(--cream-text);font-weight:400;}
+.hero-copy p:last-child{margin-bottom:0;}
+.hero-lower{margin-top:36px;}
+.contact-label{font-family:'Spectral',serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(237,231,223,.32);margin-bottom:7px;}
+.contact-email{display:block;font-family:'Spectral',serif;font-size:13px;color:var(--cream-text);text-decoration:none;margin-bottom:24px;}
+.contact-email:hover{text-decoration:underline;}
+.hero-btns{display:flex;gap:10px;}
+.hero-btn{display:inline-block;padding:7px 18px;border:1px solid rgba(237,231,223,.26);font-family:'Spectral',serif;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cream-text);text-decoration:none;transition:background .15s,border-color .15s;}
+.hero-btn:hover{background:rgba(237,231,223,.08);border-color:rgba(237,231,223,.5);}
+.hero-right{position:relative;overflow:hidden;background:var(--cream);}
+#wc{position:absolute;top:0;left:0;width:100%;height:100%;display:block;}
+.hero-right svg{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;}
+.below-fold{background:var(--cream);}
+.section-row{display:grid;grid-template-columns:36% 64%;border-top:1px solid rgba(36,36,36,.08);}
+.section-label{padding:64px 52px;border-right:1px solid rgba(36,36,36,.08);}
+.section-label>span{font-family:'Spectral',serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#aaa;position:sticky;top:52px;display:block;}
+.section-content{padding:64px 64px 64px 52px;}
+.entry{margin-bottom:52px;padding-bottom:52px;border-bottom:1px solid rgba(36,36,36,.06);}
+.entry:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.entry-head{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:400;font-size:23px;line-height:1.32;color:var(--body);margin-bottom:14px;}
+.entry p{font-size:15.5px;line-height:1.78;color:#484848;max-width:580px;margin-bottom:14px;}
+.entry p:last-child{margin-bottom:0;}
+a{color:var(--steel);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.contact-btn{display:inline-block;margin-top:18px;padding:9px 22px;border:1px solid rgba(36,36,36,.17);font-family:'Spectral',serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--body);text-decoration:none;transition:background .15s;}
+.contact-btn:hover{background:rgba(36,36,36,.04);text-decoration:none;}
+footer{border-top:1px solid rgba(36,36,36,.08);padding:22px 52px;display:flex;justify-content:space-between;align-items:center;font-family:'Spectral',serif;font-size:12.5px;color:#b0b0b0;}
+footer a{color:#b0b0b0;text-decoration:none;}
+footer a:hover{color:var(--body);text-decoration:underline;}
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;height:auto;}
+  .hero-left{padding:84px 28px 48px;min-height:68vw;}
+  .hero-right{height:80vw;}
+  nav{padding:18px 24px;gap:18px;}
+  .section-row{grid-template-columns:1fr;}
+  .section-label{padding:44px 28px 10px;border-right:none;}
+  .section-content{padding:0 28px 52px;}
+  footer{padding:18px 28px;flex-direction:column;gap:6px;}
 }
 </style>
 </head>
@@ -99,62 +99,239 @@ footer a:hover { color: var(--body); text-decoration: underline; }
   <div class="hero-right">
     <canvas id="wc"></canvas>
 
+    <!-- ══════════════════════════════════════════════════════════
+         SVG ILLUSTRATION  —  viewBox 0 0 700 950
+         Layout:
+           • Pink circle   cy=148  r=58
+           • Dark rule     y=213
+           • Teal rect     y=268  w=88  h=72
+           • Grid + orb    center (350, 462)  r=183
+           • Pedestal      y=638
+         ══════════════════════════════════════════════════════════ -->
     <svg viewBox="0 0 700 950" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
       <defs>
-        <radialGradient id="og" cx="368" cy="398" r="155" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#fdf0ec" stop-opacity="0.94"/>
-          <stop offset="38%" stop-color="#f0d0c8" stop-opacity="0.62"/>
-          <stop offset="100%" stop-color="#d4a090" stop-opacity="0"/>
+
+        <!-- ── Orb interior gradient (warm lavender-pink glow) ───────── -->
+        <radialGradient id="interior" cx="50%" cy="42%" r="58%" gradientUnits="objectBoundingBox">
+          <stop offset="0%"   stop-color="#fdeaf2" stop-opacity="1"/>
+          <stop offset="22%"  stop-color="#f5c8e2" stop-opacity="0.96"/>
+          <stop offset="48%"  stop-color="#dda0c8" stop-opacity="0.90"/>
+          <stop offset="72%"  stop-color="#b068b8" stop-opacity="0.82"/>
+          <stop offset="90%"  stop-color="#7038a0" stop-opacity="0.70"/>
+          <stop offset="100%" stop-color="#401880" stop-opacity="0.55"/>
         </radialGradient>
-        <radialGradient id="ig" cx="380" cy="394" r="118" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#fff5f0" stop-opacity="0.72"/>
-          <stop offset="100%" stop-color="#f0ede6" stop-opacity="0"/>
+
+        <!-- ── Hot-spot: bright sun/glow behind figure ──────────────── -->
+        <radialGradient id="hotspot" cx="350" cy="468" r="100" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#fff8f0" stop-opacity="1"/>
+          <stop offset="35%"  stop-color="#fde0e8" stop-opacity="0.80"/>
+          <stop offset="70%"  stop-color="#f8c0d8" stop-opacity="0.40"/>
+          <stop offset="100%" stop-color="#f0a0c8" stop-opacity="0"/>
         </radialGradient>
-        <clipPath id="oc"><circle cx="380" cy="420" r="152"/></clipPath>
+
+        <!-- ── Glass overlay: glassy tint on orb surface ────────────── -->
+        <radialGradient id="glass" cx="46%" cy="36%" r="60%" gradientUnits="objectBoundingBox">
+          <stop offset="0%"   stop-color="#f8e0ec" stop-opacity="0.08"/>
+          <stop offset="45%"  stop-color="#d898c8" stop-opacity="0.20"/>
+          <stop offset="80%"  stop-color="#a058a8" stop-opacity="0.38"/>
+          <stop offset="100%" stop-color="#602888" stop-opacity="0.55"/>
+        </radialGradient>
+
+        <!-- ── Specular highlight (upper-left glare) ────────────────── -->
+        <radialGradient id="spec" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+          <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.90"/>
+          <stop offset="55%"  stop-color="#ffffff" stop-opacity="0.28"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+        </radialGradient>
+
+        <!-- ── Rim vignette ──────────────────────────────────────────── -->
+        <radialGradient id="rim" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+          <stop offset="68%"  stop-color="#c890c0" stop-opacity="0"/>
+          <stop offset="88%"  stop-color="#8840a8" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#501878" stop-opacity="0.65"/>
+        </radialGradient>
+
+        <!-- ── Clip to orb circle ────────────────────────────────────── -->
+        <clipPath id="oc"><circle cx="350" cy="462" r="183"/></clipPath>
+
+        <!-- ── Ray gradient (bright at source, fades outward) ────────── -->
+        <linearGradient id="rayg" x1="350" y1="520" x2="350" y2="285" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#fff8f0" stop-opacity="0"/>
+          <stop offset="40%"  stop-color="#fff0e8" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#ffe8f0" stop-opacity="0.12"/>
+        </linearGradient>
+
       </defs>
-      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.58">
-        <line x1="380" y1="420" x2="380" y2="115"/><line x1="380" y1="420" x2="532" y2="156"/>
-        <line x1="380" y1="420" x2="644" y2="268"/><line x1="380" y1="420" x2="685" y2="420"/>
-        <line x1="380" y1="420" x2="644" y2="572"/><line x1="380" y1="420" x2="532" y2="684"/>
-        <line x1="380" y1="420" x2="380" y2="725"/><line x1="380" y1="420" x2="228" y2="684"/>
-        <line x1="380" y1="420" x2="116" y2="572"/><line x1="380" y1="420" x2="75" y2="420"/>
-        <line x1="380" y1="420" x2="116" y2="268"/><line x1="380" y1="420" x2="228" y2="156"/>
+
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <!-- 1. PINK CIRCLE + DARK HORIZONTAL RULE                        -->
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <circle cx="350" cy="148" r="58" fill="#c8406e"/>
+
+      <!-- Thick horizontal rule (the defining prescience motif) -->
+      <rect x="0" y="213" width="700" height="3.5" fill="#18192e"/>
+      <rect x="0" y="220" width="700" height="0.9" fill="#18192e" opacity="0.38"/>
+
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <!-- 2. RADIAL CLOCK-FACE GRID (18 spokes, 6 rings, outer dashed) -->
+      <!--    Center (350, 462), rings at r=90,135,182,228,274,320      -->
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <g stroke="#9a9490" stroke-width="0.65" fill="none" opacity="0.72">
+        <!-- Concentric rings -->
+        <circle cx="350" cy="462" r="90"/>
+        <circle cx="350" cy="462" r="135"/>
+        <circle cx="350" cy="462" r="182"/>
+        <circle cx="350" cy="462" r="228"/>
+        <circle cx="350" cy="462" r="274"/>
+        <circle cx="350" cy="462" r="320"/>
       </g>
-      <g stroke="#bfb9ae" stroke-width="0.55" fill="none" opacity="0.48">
-        <circle cx="380" cy="420" r="78"/><circle cx="380" cy="420" r="130"/>
-        <circle cx="380" cy="420" r="186"/><circle cx="380" cy="420" r="240"/>
-        <circle cx="380" cy="420" r="293"/>
+      <!-- Outer dashed boundary ring -->
+      <circle cx="350" cy="462" r="342" stroke="#9a9490" stroke-width="0.9" fill="none" stroke-dasharray="5 7" opacity="0.55"/>
+
+      <!-- 18 spokes: every 20°, starting from top (270° in SVG) -->
+      <!-- Pre-computed endpoints at r=342 from center (350,462) -->
+      <g stroke="#9a9490" stroke-width="0.65" fill="none" opacity="0.65">
+        <line x1="350" y1="462" x2="350" y2="120"/>          <!-- 270° top -->
+        <line x1="350" y1="462" x2="467" y2="141"/>          <!-- 290° -->
+        <line x1="350" y1="462" x2="570" y2="201"/>          <!-- 310° -->
+        <line x1="350" y1="462" x2="646" y2="292"/>          <!-- 330° -->
+        <line x1="350" y1="462" x2="687" y2="403"/>          <!-- 350° -->
+        <line x1="350" y1="462" x2="687" y2="521"/>          <!-- 10° -->
+        <line x1="350" y1="462" x2="646" y2="632"/>          <!-- 30° -->
+        <line x1="350" y1="462" x2="570" y2="723"/>          <!-- 50° -->
+        <line x1="350" y1="462" x2="467" y2="783"/>          <!-- 70° -->
+        <line x1="350" y1="462" x2="350" y2="804"/>          <!-- 90° bottom -->
+        <line x1="350" y1="462" x2="233" y2="783"/>          <!-- 110° -->
+        <line x1="350" y1="462" x2="130" y2="723"/>          <!-- 130° -->
+        <line x1="350" y1="462" x2="54"  y2="632"/>          <!-- 150° -->
+        <line x1="350" y1="462" x2="13"  y2="521"/>          <!-- 170° -->
+        <line x1="350" y1="462" x2="13"  y2="403"/>          <!-- 190° -->
+        <line x1="350" y1="462" x2="54"  y2="292"/>          <!-- 210° -->
+        <line x1="350" y1="462" x2="130" y2="201"/>          <!-- 230° -->
+        <line x1="350" y1="462" x2="233" y2="141"/>          <!-- 250° -->
       </g>
-      <path d="M 129 169 A 355 355 0 0 1 631 169" stroke="#b4ada2" stroke-width="0.85" fill="none" stroke-dasharray="4.5 6.5" opacity="0.48"/>
-      <line x1="380" y1="65" x2="380" y2="78" stroke="#b4ada2" stroke-width="1.1" opacity="0.58"/>
-      <line x1="247" y1="91" x2="252" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.46"/>
-      <line x1="513" y1="91" x2="508" y2="103" stroke="#b4ada2" stroke-width="0.9" opacity="0.46"/>
-      <text x="380" y="58" font-family="'Spectral',serif" font-size="9" fill="#ada69c" text-anchor="middle" letter-spacing="0.05em" opacity="0.72">230°</text>
-      <text x="234" y="84" font-family="'Spectral',serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.62">245°</text>
-      <text x="525" y="84" font-family="'Spectral',serif" font-size="9" fill="#ada69c" text-anchor="middle" opacity="0.62">215°</text>
+
+      <!-- Outer tick marks at each spoke intersection with outer ring -->
+      <g stroke="#9a9490" stroke-width="1.2" fill="none" opacity="0.60">
+        <!-- Ticks: small dashes just outside r=320, pointing outward along spoke -->
+        <!-- top -->     <line x1="350" y1="138" x2="350" y2="120"/>
+        <!-- 290° -->    <line x1="460" y1="155" x2="467" y2="141"/>
+        <!-- 310° -->    <line x1="560" y1="212" x2="570" y2="201"/>
+        <!-- 330° -->    <line x1="636" y1="300" x2="646" y2="292"/>
+        <!-- 350° -->    <line x1="678" y1="410" x2="687" y2="403"/>
+        <!-- 10° -->     <line x1="678" y1="514" x2="687" y2="521"/>
+        <!-- 30° -->     <line x1="636" y1="624" x2="646" y2="632"/>
+        <!-- 50° -->     <line x1="560" y1="712" x2="570" y2="723"/>
+        <!-- 70° -->     <line x1="460" y1="769" x2="467" y2="783"/>
+        <!-- bottom -->  <line x1="350" y1="786" x2="350" y2="804"/>
+        <!-- 110° -->    <line x1="240" y1="769" x2="233" y2="783"/>
+        <!-- 130° -->    <line x1="140" y1="712" x2="130" y2="723"/>
+        <!-- 150° -->    <line x1="64"  y1="624" x2="54"  y2="632"/>
+        <!-- 170° -->    <line x1="22"  y1="514" x2="13"  y2="521"/>
+        <!-- 190° -->    <line x1="22"  y1="410" x2="13"  y2="403"/>
+        <!-- 210° -->    <line x1="64"  y1="300" x2="54"  y2="292"/>
+        <!-- 230° -->    <line x1="140" y1="212" x2="130" y2="201"/>
+        <!-- 250° -->    <line x1="240" y1="155" x2="233" y2="141"/>
+      </g>
+
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <!-- 3. TEAL RECTANGLE (sits above orb at 12-o'clock)            -->
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <rect x="307" y="268" width="86" height="72" fill="#1c7c62"/>
+
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <!-- 4. ORB INTERIOR SCENE                                        -->
+      <!-- ─────────────────────────────────────────────────────────── -->
       <g clip-path="url(#oc)">
-        <polygon points="228,572 260,545 298,528 334,538 362,520 380,512 398,520 426,538 462,528 500,545 532,572 532,576 228,576" fill="#1c2838" opacity="0.58"/>
-        <circle cx="380" cy="394" r="118" fill="url(#ig)"/>
+
+        <!-- Base interior fill: warm lavender-pink gradient -->
+        <circle cx="350" cy="462" r="183" fill="url(#interior)"/>
+
+        <!-- Hot glow: bright light source behind/above figure -->
+        <circle cx="350" cy="462" r="183" fill="url(#hotspot)"/>
+
+        <!-- Crepuscular rays: thin triangles from focal point (350,520) fanning upward -->
+        <!-- Each ray is a narrow triangle; the linearGradient gives the fade -->
+        <g fill="url(#rayg)" opacity="0.85">
+          <polygon points="350,522 172,308 192,295"/>
+          <polygon points="350,522 198,292 218,284"/>
+          <polygon points="350,522 224,281 246,278"/>
+          <polygon points="350,522 252,278 272,280"/>
+          <polygon points="350,522 278,280 296,283"/>
+          <polygon points="350,522 302,283 318,285"/>
+          <polygon points="350,522 324,285 344,284"/>
+          <polygon points="350,522 344,284 356,284"/>
+          <polygon points="350,522 356,284 376,285"/>
+          <polygon points="350,522 376,285 396,283"/>
+          <polygon points="350,522 400,283 418,280"/>
+          <polygon points="350,522 424,280 448,278"/>
+          <polygon points="350,522 454,278 476,281"/>
+          <polygon points="350,522 482,284 502,292"/>
+          <polygon points="350,522 508,292 528,308"/>
+        </g>
+
+        <!-- Secondary softer glow wash -->
+        <ellipse cx="350" cy="460" rx="115" ry="105" fill="#fdf0f5" opacity="0.22"/>
+
+        <!-- ── Interior terrain silhouette ── -->
+        <!-- Back ridge (furthest, darkest) -->
+        <polygon points="168,645 205,606 240,618 268,596 295,578 318,560 338,548 350,542 362,548 382,560 405,578 432,596 460,618 495,606 532,645"
+                 fill="#16102e" opacity="0.90"/>
+        <!-- Mid ridge -->
+        <polygon points="168,645 196,625 222,610 252,624 278,612 308,598 336,584 350,578 364,584 392,598 422,612 448,624 478,610 504,625 532,645"
+                 fill="#1c1540" opacity="0.65"/>
+        <!-- Foreground flat ground -->
+        <polygon points="168,645 350,635 532,645 532,655 168,655"
+                 fill="#140e28" opacity="0.50"/>
+
       </g>
-      <circle cx="380" cy="420" r="166" fill="none" stroke="#e0c8c0" stroke-width="2" opacity="0.20"/>
-      <circle cx="380" cy="420" r="155" fill="url(#og)"/>
-      <circle cx="380" cy="420" r="155" fill="none" stroke="#d4beb2" stroke-width="0.9"/>
-      <circle cx="380" cy="491" r="7.5" fill="#1c2838" opacity="0.70"/>
-      <path d="M 369 499 C 367 499 365 507 366 521 L 374 521 L 380 513 L 386 521 L 394 521 C 395 507 393 499 391 499 Z" fill="#1c2838" opacity="0.68"/>
-      <g fill="#8fa6bc" opacity="0.60">
-        <circle cx="380" cy="205" r="4.5"/><circle cx="504" cy="246" r="3.5"/>
-        <circle cx="590" cy="368" r="4"/><circle cx="556" cy="508" r="3.5"/>
-        <circle cx="172" cy="476" r="3.5"/><circle cx="170" cy="364" r="4"/>
-        <circle cx="256" cy="246" r="3.5"/><circle cx="448" cy="212" r="3"/>
-        <circle cx="312" cy="212" r="3"/>
+
+      <!-- ── Glass overlay (rim darkening + colour tint) ── -->
+      <circle cx="350" cy="462" r="183" fill="url(#glass)"/>
+      <circle cx="350" cy="462" r="183" fill="url(#rim)"/>
+
+      <!-- ── Outer halo glow ring ── -->
+      <circle cx="350" cy="462" r="196" fill="none" stroke="#d8b8d0" stroke-width="1.5" opacity="0.30"/>
+
+      <!-- ── Rim stroke ── -->
+      <circle cx="350" cy="462" r="183" fill="none" stroke="#c8a0c8" stroke-width="1.4"/>
+      <circle cx="350" cy="462" r="183" fill="none" stroke="#e8d0e8" stroke-width="0.6" opacity="0.55"/>
+
+      <!-- ── Specular highlight: bright glare upper-left ── -->
+      <ellipse cx="296" cy="392" rx="48" ry="30"
+               fill="url(#spec)"
+               transform="rotate(-28,296,392)"/>
+      <!-- Secondary smaller glare -->
+      <ellipse cx="308" cy="378" rx="18" ry="10"
+               fill="white" opacity="0.35"
+               transform="rotate(-28,308,378)"/>
+
+      <!-- ── Figure silhouette (inside orb, clipped) ── -->
+      <g clip-path="url(#oc)" opacity="0.88">
+        <!-- Head -->
+        <circle cx="350" cy="512" r="8" fill="#160e2c"/>
+        <!-- Torso -->
+        <rect x="343" y="520" width="14" height="20" rx="2" fill="#160e2c"/>
+        <!-- Left arm -->
+        <line x1="343" y1="524" x2="333" y2="535" stroke="#160e2c" stroke-width="5" stroke-linecap="round"/>
+        <!-- Right arm -->
+        <line x1="357" y1="524" x2="367" y2="535" stroke="#160e2c" stroke-width="5" stroke-linecap="round"/>
+        <!-- Left leg -->
+        <line x1="346" y1="540" x2="342" y2="558" stroke="#160e2c" stroke-width="5" stroke-linecap="round"/>
+        <!-- Right leg -->
+        <line x1="354" y1="540" x2="358" y2="558" stroke="#160e2c" stroke-width="5" stroke-linecap="round"/>
+        <!-- Foot shadows -->
+        <ellipse cx="342" cy="559" rx="6" ry="2.5" fill="#160e2c" opacity="0.5"/>
+        <ellipse cx="358" cy="559" rx="6" ry="2.5" fill="#160e2c" opacity="0.5"/>
       </g>
-      <g stroke="#8fa6bc" stroke-width="0.55" fill="none" opacity="0.26" stroke-dasharray="3.5 5.5">
-        <line x1="380" y1="205" x2="504" y2="246"/><line x1="504" y1="246" x2="590" y2="368"/>
-        <line x1="590" y1="368" x2="556" y2="508"/><line x1="172" y1="476" x2="170" y2="364"/>
-        <line x1="170" y1="364" x2="256" y2="246"/><line x1="256" y1="246" x2="380" y2="205"/>
-        <line x1="380" y1="205" x2="448" y2="212"/><line x1="380" y1="205" x2="312" y2="212"/>
-        <line x1="256" y1="246" x2="504" y2="246"/>
-      </g>
+
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <!-- 5. DARK PEDESTAL BASE                                        -->
+      <!-- ─────────────────────────────────────────────────────────── -->
+      <rect x="312" y="638" width="76" height="48" fill="#0e0c1e" rx="1"/>
+      <!-- Pedestal top highlight -->
+      <rect x="312" y="638" width="76" height="3" fill="#2a2248" rx="1"/>
+
     </svg>
   </div>
 </div>
@@ -211,179 +388,89 @@ footer a:hover { color: var(--body); text-decoration: underline; }
 </footer>
 
 <script>
-(function () {
+(function(){
   'use strict';
-  const canvas = document.getElementById('wc');
-  const ctx    = canvas.getContext('2d');
-  const TAU    = Math.PI * 2;
-
-  // ═══════════════════════════════════════════════════════════════════════
-  // WAVE MODEL
-  //
-  // Each layer has N carrier wave components. Every component is a
-  // GERSTNER WAVE modulated by two amplitude envelopes:
-  //
-  //   y(x,t) = Σ_k  A_k · ENV_k(x,t) · PROFILE_k(x,t)
-  //
-  // PROFILE uses the trochoidal (Gerstner) shape:
-  //   profile = sin(θ) + Q·½·sin(2θ) + Q²·⅛·sin(3θ)
-  //   where θ = 2π(x/λ − f·t) + φ  (traveling wave)
-  //   Q ∈ [0,1]: steepness → peaked crests, flat troughs
-  //
-  // ENV = slow_envelope × fast_envelope
-  //   slow_env = 0.5 + 0.5·sin(2π(x/Λ₁ − F₁·t) + Φ₁)   [group swell]
-  //   fast_env = 0.7 + 0.3·sin(2π(x/Λ₂ − F₂·t) + Φ₂)   [set modulation]
-  //
-  // Because F₁, F₂ are incommensurable with f, envelope peaks roam
-  // independently across the surface → waves swell up, crash, recede
-  // at completely different locations and times. No synchrony.
-  // ═══════════════════════════════════════════════════════════════════════
-
-  const LAYERS = [
-    // ── Layer 0 · deep cobalt · back · slow long swells ────────────────
-    { r:15,  g:78,  b:192, base:0.895, amp:0.135, segs:55, components:[
-      { A:.50, lam:.60, f:.160, phi:0.00, Q:.22, L1:3.30, F1:.048, P1:0.00, L2:1.70, F2:.088, P2:1.80 },
-      { A:.28, lam:.37, f:.259, phi:1.57, Q:.30, L1:2.80, F1:.063, P1:3.50, L2:1.30, F2:.113, P2:4.20 },
-      { A:.14, lam:.22, f:.421, phi:3.14, Q:.38, L1:2.10, F1:.081, P1:1.20, L2:0.95, F2:.148, P2:2.90 },
-      { A:.08, lam:.14, f:.686, phi:0.85, Q:.46, L1:1.50, F1:.104, P1:5.00, L2:0.72, F2:.191, P2:0.50 },
+  const canvas=document.getElementById('wc'),ctx=canvas.getContext('2d'),TAU=Math.PI*2;
+  const LAYERS=[
+    {r:15,g:78,b:192,base:.895,amp:.135,segs:55,components:[
+      {A:.50,lam:.60,f:.160,phi:0.00,Q:.22,L1:3.30,F1:.048,P1:0.00,L2:1.70,F2:.088,P2:1.80},
+      {A:.28,lam:.37,f:.259,phi:1.57,Q:.30,L1:2.80,F1:.063,P1:3.50,L2:1.30,F2:.113,P2:4.20},
+      {A:.14,lam:.22,f:.421,phi:3.14,Q:.38,L1:2.10,F1:.081,P1:1.20,L2:.95,F2:.148,P2:2.90},
+      {A:.08,lam:.14,f:.686,phi:.85,Q:.46,L1:1.50,F1:.104,P1:5.00,L2:.72,F2:.191,P2:.50},
     ]},
-    // ── Layer 1 · cyan-teal ────────────────────────────────────────────
-    { r:0,   g:130, b:145, base:0.820, amp:0.155, segs:58, components:[
-      { A:.48, lam:.56, f:.183, phi:0.90, Q:.28, L1:3.10, F1:.055, P1:1.40, L2:1.55, F2:.099, P2:3.10 },
-      { A:.30, lam:.33, f:.300, phi:2.40, Q:.36, L1:2.55, F1:.072, P1:4.20, L2:1.20, F2:.129, P2:0.80 },
-      { A:.14, lam:.20, f:.490, phi:1.00, Q:.44, L1:1.90, F1:.093, P1:2.80, L2:0.88, F2:.169, P2:5.10 },
-      { A:.08, lam:.13, f:.800, phi:3.80, Q:.52, L1:1.35, F1:.120, P1:0.40, L2:0.65, F2:.218, P2:2.30 },
+    {r:0,g:130,b:145,base:.820,amp:.155,segs:58,components:[
+      {A:.48,lam:.56,f:.183,phi:.90,Q:.28,L1:3.10,F1:.055,P1:1.40,L2:1.55,F2:.099,P2:3.10},
+      {A:.30,lam:.33,f:.300,phi:2.40,Q:.36,L1:2.55,F1:.072,P1:4.20,L2:1.20,F2:.129,P2:.80},
+      {A:.14,lam:.20,f:.490,phi:1.00,Q:.44,L1:1.90,F1:.093,P1:2.80,L2:.88,F2:.169,P2:5.10},
+      {A:.08,lam:.13,f:.800,phi:3.80,Q:.52,L1:1.35,F1:.120,P1:.40,L2:.65,F2:.218,P2:2.30},
     ]},
-    // ── Layer 2 · forest green ─────────────────────────────────────────
-    { r:28,  g:148, b:72,  base:0.748, amp:0.172, segs:60, components:[
-      { A:.46, lam:.53, f:.207, phi:1.80, Q:.32, L1:2.90, F1:.062, P1:2.90, L2:1.42, F2:.111, P2:0.70 },
-      { A:.30, lam:.31, f:.342, phi:0.40, Q:.40, L1:2.35, F1:.082, P1:5.50, L2:1.10, F2:.146, P2:3.90 },
-      { A:.15, lam:.19, f:.558, phi:2.90, Q:.49, L1:1.75, F1:.105, P1:1.60, L2:0.82, F2:.191, P2:1.20 },
-      { A:.09, lam:.12, f:.910, phi:1.50, Q:.57, L1:1.22, F1:.136, P1:4.30, L2:0.60, F2:.247, P2:4.80 },
+    {r:28,g:148,b:72,base:.748,amp:.172,segs:60,components:[
+      {A:.46,lam:.53,f:.207,phi:1.80,Q:.32,L1:2.90,F1:.062,P1:2.90,L2:1.42,F2:.111,P2:.70},
+      {A:.30,lam:.31,f:.342,phi:.40,Q:.40,L1:2.35,F1:.082,P1:5.50,L2:1.10,F2:.146,P2:3.90},
+      {A:.15,lam:.19,f:.558,phi:2.90,Q:.49,L1:1.75,F1:.105,P1:1.60,L2:.82,F2:.191,P2:1.20},
+      {A:.09,lam:.12,f:.910,phi:1.50,Q:.57,L1:1.22,F1:.136,P1:4.30,L2:.60,F2:.247,P2:4.80},
     ]},
-    // ── Layer 3 · amber-gold ───────────────────────────────────────────
-    { r:198, g:138, b:8,   base:0.672, amp:0.192, segs:62, components:[
-      { A:.44, lam:.50, f:.234, phi:2.60, Q:.38, L1:2.70, F1:.070, P1:4.40, L2:1.30, F2:.124, P2:2.20 },
-      { A:.30, lam:.29, f:.390, phi:0.70, Q:.46, L1:2.15, F1:.092, P1:1.00, L2:1.00, F2:.164, P2:5.60 },
-      { A:.16, lam:.17, f:.635, phi:3.50, Q:.55, L1:1.60, F1:.119, P1:3.20, L2:0.75, F2:.213, P2:0.90 },
-      { A:.10, lam:.11, f:1.04, phi:0.30, Q:.62, L1:1.12, F1:.154, P1:6.10, L2:0.55, F2:.275, P2:3.50 },
+    {r:198,g:138,b:8,base:.672,amp:.192,segs:62,components:[
+      {A:.44,lam:.50,f:.234,phi:2.60,Q:.38,L1:2.70,F1:.070,P1:4.40,L2:1.30,F2:.124,P2:2.20},
+      {A:.30,lam:.29,f:.390,phi:.70,Q:.46,L1:2.15,F1:.092,P1:1.00,L2:1.00,F2:.164,P2:5.60},
+      {A:.16,lam:.17,f:.635,phi:3.50,Q:.55,L1:1.60,F1:.119,P1:3.20,L2:.75,F2:.213,P2:.90},
+      {A:.10,lam:.11,f:1.04,phi:.30,Q:.62,L1:1.12,F1:.154,P1:6.10,L2:.55,F2:.275,P2:3.50},
     ]},
-    // ── Layer 4 · deep orange ─────────────────────────────────────────
-    { r:202, g:72,  b:14,  base:0.600, amp:0.188, segs:64, components:[
-      { A:.43, lam:.47, f:.262, phi:0.50, Q:.44, L1:2.50, F1:.079, P1:5.80, L2:1.18, F2:.140, P2:3.70 },
-      { A:.30, lam:.27, f:.444, phi:2.10, Q:.52, L1:1.95, F1:.104, P1:2.10, L2:0.90, F2:.184, P2:1.40 },
-      { A:.17, lam:.16, f:.725, phi:4.10, Q:.60, L1:1.44, F1:.134, P1:0.30, L2:0.68, F2:.239, P2:5.90 },
-      { A:.10, lam:.10, f:1.18, phi:1.50, Q:.67, L1:1.00, F1:.174, P1:3.90, L2:0.50, F2:.309, P2:2.10 },
+    {r:202,g:72,b:14,base:.600,amp:.188,segs:64,components:[
+      {A:.43,lam:.47,f:.262,phi:.50,Q:.44,L1:2.50,F1:.079,P1:5.80,L2:1.18,F2:.140,P2:3.70},
+      {A:.30,lam:.27,f:.444,phi:2.10,Q:.52,L1:1.95,F1:.104,P1:2.10,L2:.90,F2:.184,P2:1.40},
+      {A:.17,lam:.16,f:.725,phi:4.10,Q:.60,L1:1.44,F1:.134,P1:.30,L2:.68,F2:.239,P2:5.90},
+      {A:.10,lam:.10,f:1.18,phi:1.50,Q:.67,L1:1.00,F1:.174,P1:3.90,L2:.50,F2:.309,P2:2.10},
     ]},
-    // ── Layer 5 · terra cotta · front · fastest · most peaked ─────────
-    { r:150, g:42,  b:36,  base:0.540, amp:0.148, segs:66, components:[
-      { A:.41, lam:.44, f:.295, phi:1.70, Q:.52, L1:2.30, F1:.089, P1:1.20, L2:1.05, F2:.157, P2:4.60 },
-      { A:.31, lam:.25, f:.505, phi:3.30, Q:.59, L1:1.78, F1:.117, P1:3.80, L2:0.82, F2:.207, P2:0.20 },
-      { A:.18, lam:.15, f:.841, phi:0.90, Q:.66, L1:1.30, F1:.151, P1:6.00, L2:0.62, F2:.268, P2:3.30 },
-      { A:.10, lam:.09, f:1.40, phi:2.50, Q:.72, L1:0.90, F1:.196, P1:2.50, L2:0.45, F2:.347, P2:1.00 },
+    {r:150,g:42,b:36,base:.540,amp:.148,segs:66,components:[
+      {A:.41,lam:.44,f:.295,phi:1.70,Q:.52,L1:2.30,F1:.089,P1:1.20,L2:1.05,F2:.157,P2:4.60},
+      {A:.31,lam:.25,f:.505,phi:3.30,Q:.59,L1:1.78,F1:.117,P1:3.80,L2:.82,F2:.207,P2:.20},
+      {A:.18,lam:.15,f:.841,phi:.90,Q:.66,L1:1.30,F1:.151,P1:6.00,L2:.62,F2:.268,P2:3.30},
+      {A:.10,lam:.09,f:1.40,phi:2.50,Q:.72,L1:.90,F1:.196,P1:2.50,L2:.45,F2:.347,P2:1.00},
     ]},
   ];
-
-  // Pre-compute per-layer amplitude norm so displacement ∈ [-1, 1]
-  LAYERS.forEach(L => {
-    L._norm = L.components.reduce((s, c) => s + c.A, 0);
-  });
-
-  let W = 1, H = 1, t0 = null;
-
-  function resize() {
-    const p = canvas.parentElement;
-    W = canvas.width  = p.offsetWidth;
-    H = canvas.height = p.offsetHeight;
-  }
-  window.addEventListener('resize', resize);
-  resize();
-
-  // ── Gerstner surface displacement at normalised x ∈ [0,1], time t (s) ─
-  function surfaceY(xN, t, L) {
-    let h = 0;
-    for (const c of L.components) {
-      // Carrier phase (traveling left)
-      const θ = TAU * (xN / c.lam - c.f * t) + c.phi;
-
-      // Trochoidal (Gerstner) profile → peaked crests, flat troughs
-      const Q   = c.Q;
-      const profile = Math.sin(θ)
-                    + Q * 0.500 * Math.sin(2 * θ)
-                    + Q * Q * 0.125 * Math.sin(3 * θ);
-
-      // Wave group envelopes — independently traveling
-      // slow: determines which "set" is arriving
-      const e1 = 0.50 + 0.50 * Math.sin(TAU * (xN / c.L1 - c.F1 * t) + c.P1);
-      // fast: fine-grained set modulation
-      const e2 = 0.68 + 0.32 * Math.sin(TAU * (xN / c.L2 - c.F2 * t) + c.P2);
-
-      h += c.A * e1 * e2 * profile;
+  LAYERS.forEach(L=>{L._norm=L.components.reduce((s,c)=>s+c.A,0);});
+  let W=1,H=1,t0=null;
+  function resize(){const p=canvas.parentElement;W=canvas.width=p.offsetWidth;H=canvas.height=p.offsetHeight;}
+  window.addEventListener('resize',resize);resize();
+  function surfaceY(xN,t,L){
+    let h=0;
+    for(const c of L.components){
+      const θ=TAU*(xN/c.lam-c.f*t)+c.phi;
+      const Q=c.Q;
+      const profile=Math.sin(θ)+Q*.500*Math.sin(2*θ)+Q*Q*.125*Math.sin(3*θ);
+      const e1=.50+.50*Math.sin(TAU*(xN/c.L1-c.F1*t)+c.P1);
+      const e2=.68+.32*Math.sin(TAU*(xN/c.L2-c.F2*t)+c.P2);
+      h+=c.A*e1*e2*profile;
     }
-    // Normalise; apply layer amplitude in canvas pixels
-    return H * L.base - (h / L._norm) * L.amp * H;
+    return H*L.base-(h/L._norm)*L.amp*H;
   }
-
-  // ── Draw one terrain layer ────────────────────────────────────────────
-  function drawLayer(L, t) {
-    const segs = L.segs;
-    const dx   = W / segs;
-    const yB   = H + 2;
-    const clamp = v => Math.max(0, Math.min(255, Math.round(v)));
-
-    for (let i = 0; i < segs; i++) {
-      const x0 = i * dx,        x1 = (i + 1) * dx;
-      const y0 = surfaceY(x0 / W, t, L);
-      const y1 = surfaceY(x1 / W, t, L);
-
-      // Directional light: slope drives face brightness
-      // (negative slope = face tilted toward light = brighter)
-      const slope  = (y1 - y0) / dx;
-      const light  = -slope * 72;
-      // Small high-frequency jitter to break up facets further
-      const jitter = Math.sin(i * 11.3 + t * 1.1) * 7
-                   + Math.sin(i *  5.7 - t * 0.7) * 5;
-      const v = light + jitter;
-
-      // Upper triangle — slopes toward viewer, lighter
-      ctx.beginPath();
-      ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.lineTo(x1, yB);
-      ctx.closePath();
-      ctx.fillStyle = `rgb(${clamp(L.r+v)},${clamp(L.g+v*.72)},${clamp(L.b+v*.52)})`;
-      ctx.fill();
-      ctx.strokeStyle = 'rgba(255,255,255,0.26)';
-      ctx.lineWidth   = 0.7;
-      ctx.stroke();
-
-      // Lower triangle — back face, darker
-      ctx.beginPath();
-      ctx.moveTo(x0, y0); ctx.lineTo(x1, yB); ctx.lineTo(x0, yB);
-      ctx.closePath();
-      ctx.fillStyle = `rgb(${clamp(L.r-v*.5)},${clamp(L.g-v*.38)},${clamp(L.b-v*.28)})`;
-      ctx.fill();
-      ctx.strokeStyle = 'rgba(255,255,255,0.26)';
-      ctx.lineWidth   = 0.7;
-      ctx.stroke();
+  function drawLayer(L,t){
+    const segs=L.segs,dx=W/segs,yB=H+2;
+    const clamp=v=>Math.max(0,Math.min(255,Math.round(v)));
+    for(let i=0;i<segs;i++){
+      const x0=i*dx,x1=(i+1)*dx;
+      const y0=surfaceY(x0/W,t,L),y1=surfaceY(x1/W,t,L);
+      const slope=(y1-y0)/dx,light=-slope*72;
+      const jitter=Math.sin(i*11.3+t*1.1)*7+Math.sin(i*5.7-t*.7)*5;
+      const v=light+jitter;
+      ctx.beginPath();ctx.moveTo(x0,y0);ctx.lineTo(x1,y1);ctx.lineTo(x1,yB);ctx.closePath();
+      ctx.fillStyle=`rgb(${clamp(L.r+v)},${clamp(L.g+v*.72)},${clamp(L.b+v*.52)})`;
+      ctx.fill();ctx.strokeStyle='rgba(255,255,255,0.26)';ctx.lineWidth=.7;ctx.stroke();
+      ctx.beginPath();ctx.moveTo(x0,y0);ctx.lineTo(x1,yB);ctx.lineTo(x0,yB);ctx.closePath();
+      ctx.fillStyle=`rgb(${clamp(L.r-v*.5)},${clamp(L.g-v*.38)},${clamp(L.b-v*.28)})`;
+      ctx.fill();ctx.strokeStyle='rgba(255,255,255,0.26)';ctx.lineWidth=.7;ctx.stroke();
     }
   }
-
-  // ── Render loop ───────────────────────────────────────────────────────
-  function frame(ts) {
-    if (!t0) t0 = ts;
-    const t = (ts - t0) / 1000;
-
-    // Cream background
-    const bg = ctx.createRadialGradient(W*.50, H*.36, 0, W*.50, H*.36, W*.64);
-    bg.addColorStop(0, '#eae6dd');
-    bg.addColorStop(1, '#f0ede6');
-    ctx.fillStyle = bg;
-    ctx.fillRect(0, 0, W, H);
-
-    for (const L of LAYERS) drawLayer(L, t);
-
+  function frame(ts){
+    if(!t0)t0=ts;
+    const t=(ts-t0)/1000;
+    const bg=ctx.createRadialGradient(W*.50,H*.36,0,W*.50,H*.36,W*.64);
+    bg.addColorStop(0,'#eae6dd');bg.addColorStop(1,'#f0ede6');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    for(const L of LAYERS)drawLayer(L,t);
     requestAnimationFrame(frame);
   }
-
   requestAnimationFrame(frame);
 })();
 </script>
