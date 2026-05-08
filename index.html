@@ -54,7 +54,7 @@ nav a:hover{opacity:.45;}
 @media(max-width:820px){.school-grid{grid-template-columns:repeat(2,1fr);}}
 a{color:var(--steel);text-decoration:none;}
 a:hover{text-decoration:underline;}
-.contact-btn{display:inline-block;margin-top:18px;padding:9px 22px;border:1px solid rgba(36,36,36,.17);font-family:'Spectral',serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--body);text-decoration:none;transition:background .15s;}
+.contact-btn{display:inline-block;margin-top:18px;padding:9px 22px;border:1px solid rgba(36,36,36,.17);font-family:'Spectral',serif;font-size:11px;letter-spacing:.04em;color:var(--body);text-decoration:none;transition:background .15s;}
 .contact-btn:hover{background:rgba(36,36,36,.04);text-decoration:none;}
 footer{border-top:1px solid rgba(36,36,36,.08);padding:22px 52px;display:flex;justify-content:space-between;align-items:center;font-family:'Spectral',serif;font-size:12.5px;color:#b0b0b0;}
 footer a{color:#b0b0b0;text-decoration:none;}
@@ -388,7 +388,7 @@ footer a:hover{color:var(--body);text-decoration:underline;}
       </div>
       <div class="entry">
         <div class="entry-head">Eight months</div>
-        <p>We operated for eight months. The research reached a place we were genuinely proud of. The science held, the hardware worked, and the signal processing pipeline performed beyond what we had modeled in early design. We could not secure the funding the work required. We could not find the lab testers willing to let us sit behind them on a live desk. The combination was fatal. We closed.</p>
+        <p>We operated for eight months. The research reached a place we were genuinely proud of. The science held, the hardware worked, and the signal processing pipeline performed beyond what we had modeled in early design. The work was placed on pause. The team never disbanded.</p>
       </div>
       <div class="entry">
         <div class="entry-head">Where the team went</div>
@@ -417,37 +417,37 @@ footer a:hover{color:var(--body);text-decoration:underline;}
   'use strict';
   const canvas=document.getElementById('wc'),ctx=canvas.getContext('2d'),TAU=Math.PI*2;
   const LAYERS=[
-    {r:15,g:78,b:192,base:.895,amp:.135,segs:55,components:[
+    {r:15,g:78,b:192,base:.980,amp:.080,segs:55,components:[
       {A:.50,lam:.60,f:.160,phi:0.00,Q:.22,L1:3.30,F1:.048,P1:0.00,L2:1.70,F2:.088,P2:1.80},
       {A:.28,lam:.37,f:.259,phi:1.57,Q:.30,L1:2.80,F1:.063,P1:3.50,L2:1.30,F2:.113,P2:4.20},
       {A:.14,lam:.22,f:.421,phi:3.14,Q:.38,L1:2.10,F1:.081,P1:1.20,L2:.95,F2:.148,P2:2.90},
       {A:.08,lam:.14,f:.686,phi:.85,Q:.46,L1:1.50,F1:.104,P1:5.00,L2:.72,F2:.191,P2:.50},
     ]},
-    {r:0,g:130,b:145,base:.820,amp:.155,segs:58,components:[
+    {r:0,g:130,b:145,base:.940,amp:.090,segs:58,components:[
       {A:.48,lam:.56,f:.183,phi:.90,Q:.28,L1:3.10,F1:.055,P1:1.40,L2:1.55,F2:.099,P2:3.10},
       {A:.30,lam:.33,f:.300,phi:2.40,Q:.36,L1:2.55,F1:.072,P1:4.20,L2:1.20,F2:.129,P2:.80},
       {A:.14,lam:.20,f:.490,phi:1.00,Q:.44,L1:1.90,F1:.093,P1:2.80,L2:.88,F2:.169,P2:5.10},
       {A:.08,lam:.13,f:.800,phi:3.80,Q:.52,L1:1.35,F1:.120,P1:.40,L2:.65,F2:.218,P2:2.30},
     ]},
-    {r:28,g:148,b:72,base:.748,amp:.172,segs:60,components:[
+    {r:28,g:148,b:72,base:.900,amp:.105,segs:60,components:[
       {A:.46,lam:.53,f:.207,phi:1.80,Q:.32,L1:2.90,F1:.062,P1:2.90,L2:1.42,F2:.111,P2:.70},
       {A:.30,lam:.31,f:.342,phi:.40,Q:.40,L1:2.35,F1:.082,P1:5.50,L2:1.10,F2:.146,P2:3.90},
       {A:.15,lam:.19,f:.558,phi:2.90,Q:.49,L1:1.75,F1:.105,P1:1.60,L2:.82,F2:.191,P2:1.20},
       {A:.09,lam:.12,f:.910,phi:1.50,Q:.57,L1:1.22,F1:.136,P1:4.30,L2:.60,F2:.247,P2:4.80},
     ]},
-    {r:198,g:138,b:8,base:.672,amp:.192,segs:62,components:[
+    {r:198,g:138,b:8,base:.858,amp:.118,segs:62,components:[
       {A:.44,lam:.50,f:.234,phi:2.60,Q:.38,L1:2.70,F1:.070,P1:4.40,L2:1.30,F2:.124,P2:2.20},
       {A:.30,lam:.29,f:.390,phi:.70,Q:.46,L1:2.15,F1:.092,P1:1.00,L2:1.00,F2:.164,P2:5.60},
       {A:.16,lam:.17,f:.635,phi:3.50,Q:.55,L1:1.60,F1:.119,P1:3.20,L2:.75,F2:.213,P2:.90},
       {A:.10,lam:.11,f:1.04,phi:.30,Q:.62,L1:1.12,F1:.154,P1:6.10,L2:.55,F2:.275,P2:3.50},
     ]},
-    {r:202,g:72,b:14,base:.600,amp:.188,segs:64,components:[
+    {r:202,g:72,b:14,base:.818,amp:.110,segs:64,components:[
       {A:.43,lam:.47,f:.262,phi:.50,Q:.44,L1:2.50,F1:.079,P1:5.80,L2:1.18,F2:.140,P2:3.70},
       {A:.30,lam:.27,f:.444,phi:2.10,Q:.52,L1:1.95,F1:.104,P1:2.10,L2:.90,F2:.184,P2:1.40},
       {A:.17,lam:.16,f:.725,phi:4.10,Q:.60,L1:1.44,F1:.134,P1:.30,L2:.68,F2:.239,P2:5.90},
       {A:.10,lam:.10,f:1.18,phi:1.50,Q:.67,L1:1.00,F1:.174,P1:3.90,L2:.50,F2:.309,P2:2.10},
     ]},
-    {r:150,g:42,b:36,base:.540,amp:.148,segs:66,components:[
+    {r:150,g:42,b:36,base:.778,amp:.095,segs:66,components:[
       {A:.41,lam:.44,f:.295,phi:1.70,Q:.52,L1:2.30,F1:.089,P1:1.20,L2:1.05,F2:.157,P2:4.60},
       {A:.31,lam:.25,f:.505,phi:3.30,Q:.59,L1:1.78,F1:.117,P1:3.80,L2:.82,F2:.207,P2:.20},
       {A:.18,lam:.15,f:.841,phi:.90,Q:.66,L1:1.30,F1:.151,P1:6.00,L2:.62,F2:.268,P2:3.30},
